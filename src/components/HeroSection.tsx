@@ -1,0 +1,87 @@
+import { ArrowDown, Mail, Linkedin, Github } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
+const HeroSection = () => {
+  return (
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Background gradient orbs */}
+      <div className="absolute top-20 left-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-float" />
+      <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent/15 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }} />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl" />
+      
+      <div className="section-container relative z-10 text-center">
+        <div className="animate-slide-up">
+          <p className="text-primary font-medium mb-4 tracking-widest uppercase text-sm">
+            Welcome to my portfolio
+          </p>
+          
+          <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold mb-6">
+            Hi, I'm{" "}
+            <span className="text-gradient">Jayasri T</span>
+          </h1>
+          
+          <p className="text-xl md:text-2xl text-muted-foreground mb-4 font-display">
+            Aspiring AI & ML Engineer
+          </p>
+          
+          <p className="max-w-2xl mx-auto text-muted-foreground mb-8 leading-relaxed">
+            Building intelligent solutions with strong foundations in Python, machine learning, 
+            and data science. Passionate about designing, training, and deploying ML models 
+            that solve real-world problems.
+          </p>
+          
+          <div className="flex items-center justify-center gap-4 mb-12">
+            <Button 
+              variant="default" 
+              size="lg"
+              className="glow-primary"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              <Mail className="mr-2 h-4 w-4" />
+              Get in Touch
+            </Button>
+            
+            <Button 
+              variant="outline" 
+              size="lg"
+              onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              View Projects
+            </Button>
+          </div>
+          
+          <div className="flex items-center justify-center gap-6">
+            <a 
+              href="https://www.linkedin.com/in/jayasri-t-sri" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-primary transition-colors duration-300"
+            >
+              <Linkedin className="h-6 w-6" />
+            </a>
+            <a 
+              href="https://github.com/jayasri21072006" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-primary transition-colors duration-300"
+            >
+              <Github className="h-6 w-6" />
+            </a>
+            <a 
+              href="mailto:jayasri21072006@gmail.com"
+              className="text-muted-foreground hover:text-primary transition-colors duration-300"
+            >
+              <Mail className="h-6 w-6" />
+            </a>
+          </div>
+        </div>
+        
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+          <ArrowDown className="h-6 w-6 text-muted-foreground" />
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default HeroSection;
