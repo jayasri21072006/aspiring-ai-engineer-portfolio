@@ -1,13 +1,41 @@
-import { GraduationCap, Award } from "lucide-react";
+import { GraduationCap, Award, ExternalLink, ChevronRight } from "lucide-react";
 
 const courses = [
-  "Google Data Analytics - Coursera",
-  "Supervised Learning: Regression & Classification - Stanford (Coursera)",
-  "Generative AI - IBM (Coursera) & LinkedIn Learning",
-  "MongoDB - MongoDB University",
-  "Python - GUVI",
-  "SQL (Basic & Intermediate) - HackerRank",
-  "Advanced SQL & Python - CodeChef AI for India (GUVI)"
+  {
+    name: "Google Data Analytics",
+    platform: "Coursera",
+    link: "#"
+  },
+  {
+    name: "Supervised Learning: Regression & Classification",
+    platform: "Stanford (Coursera)",
+    link: "#"
+  },
+  {
+    name: "Generative AI",
+    platform: "IBM (Coursera) & LinkedIn Learning",
+    link: "#"
+  },
+  {
+    name: "MongoDB",
+    platform: "MongoDB University",
+    link: "#"
+  },
+  {
+    name: "Python",
+    platform: "GUVI",
+    link: "#"
+  },
+  {
+    name: "SQL (Basic & Intermediate)",
+    platform: "HackerRank",
+    link: "#"
+  },
+  {
+    name: "Advanced SQL & Python",
+    platform: "CodeChef AI for India (GUVI)",
+    link: "#"
+  }
 ];
 
 const EducationSection = () => {
@@ -54,14 +82,26 @@ const EducationSection = () => {
             <h3 className="font-display text-xl font-bold">Certifications</h3>
           </div>
           
-          <ul className="space-y-3">
+          <ul className="space-y-2">
             {courses.map((course, index) => (
-              <li 
-                key={index}
-                className="flex items-start gap-3 text-muted-foreground hover:text-foreground transition-colors duration-300"
-              >
-                <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                <span className="text-sm">{course}</span>
+              <li key={index}>
+                <a 
+                  href={course.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center justify-between gap-3 p-3 -mx-3 rounded-lg hover:bg-primary/5 transition-all duration-300"
+                >
+                  <div className="flex items-start gap-3 flex-1 min-w-0">
+                    <ChevronRight className="h-4 w-4 text-primary mt-1 flex-shrink-0 group-hover:translate-x-1 transition-transform duration-300" />
+                    <div className="min-w-0">
+                      <p className="text-sm font-medium text-foreground group-hover:text-primary transition-colors duration-300 truncate">
+                        {course.name}
+                      </p>
+                      <p className="text-xs text-muted-foreground">{course.platform}</p>
+                    </div>
+                  </div>
+                  <ExternalLink className="h-4 w-4 text-muted-foreground opacity-0 group-hover:opacity-100 group-hover:text-primary transition-all duration-300 flex-shrink-0" />
+                </a>
               </li>
             ))}
           </ul>
