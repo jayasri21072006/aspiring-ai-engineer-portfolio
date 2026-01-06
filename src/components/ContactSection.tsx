@@ -20,47 +20,47 @@ const ContactSection = () => {
         <div className="card-glass rounded-2xl p-8 md:p-12">
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-6">
-              <h3 className="font-display text-xl font-semibold mb-4">Contact Information</h3>
+              <h3 className="font-display text-xl font-semibold mb-4 text-white">Contact Information</h3>
               
               <a 
                 href="mailto:jayasri21072006@gmail.com"
-                className="flex items-center gap-4 text-muted-foreground hover:text-primary transition-colors duration-300 group"
+                className="flex items-center gap-4 hover:text-primary transition-colors duration-300 group"
               >
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center group-hover:glow-primary transition-all duration-300">
+                <div className="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center group-hover:glow-primary transition-all duration-300">
                   <Mail className="h-5 w-5 text-primary" />
                 </div>
                 <div>
-                  <p className="text-sm text-muted-foreground">Email</p>
-                  <p className="text-foreground">jayasri21072006@gmail.com</p>
+                  <p className="text-sm text-primary/80 font-medium">Email</p>
+                  <p className="text-white font-medium">jayasri21072006@gmail.com</p>
                 </div>
               </a>
               
               <a 
                 href="tel:+919342531156"
-                className="flex items-center gap-4 text-muted-foreground hover:text-primary transition-colors duration-300 group"
+                className="flex items-center gap-4 hover:text-primary transition-colors duration-300 group"
               >
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center group-hover:glow-primary transition-all duration-300">
+                <div className="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center group-hover:glow-primary transition-all duration-300">
                   <Phone className="h-5 w-5 text-primary" />
                 </div>
                 <div>
-                  <p className="text-sm text-muted-foreground">Phone</p>
-                  <p className="text-foreground">+91 93425 31156</p>
+                  <p className="text-sm text-primary/80 font-medium">Phone</p>
+                  <p className="text-white font-medium">+91 93425 31156</p>
                 </div>
               </a>
               
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                <div className="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center">
                   <MapPin className="h-5 w-5 text-primary" />
                 </div>
                 <div>
-                  <p className="text-sm text-muted-foreground">Location</p>
-                  <p className="text-foreground">Chengalpet, Tamil Nadu, India</p>
+                  <p className="text-sm text-primary/80 font-medium">Location</p>
+                  <p className="text-white font-medium">Chengalpet, Tamil Nadu, India</p>
                 </div>
               </div>
             </div>
             
             <div className="space-y-6">
-              <h3 className="font-display text-xl font-semibold mb-4">Social Links</h3>
+              <h3 className="font-display text-xl font-semibold mb-4 text-white">Social Links</h3>
               
               <div className="flex flex-col gap-4">
                 <Button 
