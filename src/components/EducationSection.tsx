@@ -4,37 +4,30 @@ const courses = [
   {
     name: "Google Data Analytics",
     platform: "Coursera",
-    link: "#"
+    links: [{ label: "View Certificate", url: "https://github.com/jayasri21072006/pro/blob/main/Google%20Data%20analytics%20professional%20certificate.pdf" }]
   },
   {
-    name: "Supervised Learning: Regression & Classification",
-    platform: "Stanford (Coursera)",
-    link: "#"
-  },
-  {
-    name: "Generative AI",
-    platform: "IBM (Coursera) & LinkedIn Learning",
-    link: "#"
+    name: "Machine Learning",
+    platform: "Coursera & AWS",
+    links: [{ label: "View Certificate", url: "https://github.com/jayasri21072006/pro/blob/main/ML%20certification%20-Coursera%2CAWS.pdf" }]
   },
   {
     name: "MongoDB",
     platform: "MongoDB University",
-    link: "#"
+    links: [{ label: "View Certificate", url: "https://github.com/jayasri21072006/pro/blob/main/MongoDB.pdf" }]
   },
   {
-    name: "Python",
-    platform: "GUVI",
-    link: "#"
+    name: "Data Science & Generative AI",
+    platform: "PW Skills & IBM",
+    links: [
+      { label: "Data Science", url: "https://github.com/jayasri21072006/pro/blob/main/pw%20skills%20DS%20with%20GenAI.pdf" },
+      { label: "Generative AI", url: "https://github.com/jayasri21072006/pro/blob/main/Gen%20AI%20certfication.pdf" }
+    ]
   },
   {
-    name: "SQL (Basic & Intermediate)",
-    platform: "HackerRank",
-    link: "#"
-  },
-  {
-    name: "Advanced SQL & Python",
-    platform: "CodeChef AI for India (GUVI)",
-    link: "#"
+    name: "SQL Certification",
+    platform: "HackerRank & CodeChef",
+    links: [{ label: "View Certificate", url: "https://github.com/jayasri21072006/pro/blob/main/SQL%20certification.pdf" }]
   }
 ];
 
@@ -84,24 +77,30 @@ const EducationSection = () => {
           
           <ul className="space-y-2">
             {courses.map((course, index) => (
-              <li key={index}>
-                <a 
-                  href={course.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex items-center justify-between gap-3 p-3 -mx-3 rounded-lg hover:bg-primary/5 transition-all duration-300"
-                >
-                  <div className="flex items-start gap-3 flex-1 min-w-0">
-                    <ChevronRight className="h-4 w-4 text-primary mt-1 flex-shrink-0 group-hover:translate-x-1 transition-transform duration-300" />
-                    <div className="min-w-0">
-                      <p className="text-sm font-medium text-foreground group-hover:text-primary transition-colors duration-300 truncate">
-                        {course.name}
-                      </p>
-                      <p className="text-xs text-muted-foreground">{course.platform}</p>
+              <li key={index} className="p-3 -mx-3 rounded-lg hover:bg-primary/5 transition-all duration-300">
+                <div className="flex items-start gap-3">
+                  <ChevronRight className="h-4 w-4 text-primary mt-1 flex-shrink-0" />
+                  <div className="flex-1 min-w-0">
+                    <p className="text-sm font-medium text-foreground">
+                      {course.name}
+                    </p>
+                    <p className="text-xs text-muted-foreground mb-2">{course.platform}</p>
+                    <div className="flex flex-wrap gap-2">
+                      {course.links.map((link, linkIndex) => (
+                        <a
+                          key={linkIndex}
+                          href={link.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1 text-xs text-primary hover:text-primary/80 hover:underline transition-all duration-300"
+                        >
+                          <ExternalLink className="h-3 w-3" />
+                          {link.label}
+                        </a>
+                      ))}
                     </div>
                   </div>
-                  <ExternalLink className="h-4 w-4 text-muted-foreground opacity-0 group-hover:opacity-100 group-hover:text-primary transition-all duration-300 flex-shrink-0" />
-                </a>
+                </div>
               </li>
             ))}
           </ul>
