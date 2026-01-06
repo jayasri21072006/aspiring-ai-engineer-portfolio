@@ -1,23 +1,26 @@
-import { Briefcase } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 
 const experiences = [
+  {
+    role: "Node.js Intern",
+    company: "Askan Technologies",
+    period: "Dec 2025",
+    description: "Built backend services and API integrations",
+    certificateUrl: "https://github.com/jayasri21072006/pro/blob/main/Askan%20Node.js%20intern.pdf"
+  },
   {
     role: "ML Intern",
     company: "Saiket Systems",
     period: "Jun 2025 - Jul 2025",
-    description: "Worked on machine learning projects and model development"
+    description: "Worked on machine learning projects and model development",
+    certificateUrl: "https://github.com/jayasri21072006/pro/blob/main/saiket%20Ml%20intern.pdf"
   },
   {
     role: "Python Intern",
     company: "Cognifyz Technologies",
     period: "Feb 2025 - Mar 2025",
-    description: "Developed Python-based solutions and automation scripts"
-  },
-  {
-    role: "Node.js Intern",
-    company: "Askan Technologies",
-    period: "Dec 2025",
-    description: "Built backend services and API integrations"
+    description: "Developed Python-based solutions and automation scripts",
+    certificateUrl: "https://github.com/jayasri21072006/pro/blob/main/cognifyz%20python%20Intern.pdf"
   }
 ];
 
@@ -43,10 +46,18 @@ const ExperienceSection = () => {
               {/* Timeline dot */}
               <div className="absolute left-4 top-1 timeline-dot" />
               
-              <div className="card-glass rounded-xl p-6 hover:border-primary/30 transition-all duration-300">
+              <a 
+                href={exp.certificateUrl} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="card-glass rounded-xl p-6 hover:border-primary/30 transition-all duration-300 block group cursor-pointer"
+              >
                 <div className="flex items-start justify-between flex-wrap gap-2 mb-3">
                   <div>
-                    <h3 className="font-display text-xl font-semibold">{exp.role}</h3>
+                    <h3 className="font-display text-xl font-semibold flex items-center gap-2">
+                      {exp.role}
+                      <ExternalLink className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity text-primary" />
+                    </h3>
                     <p className="text-primary">{exp.company}</p>
                   </div>
                   <span className="text-sm text-muted-foreground bg-secondary px-3 py-1 rounded-full">
@@ -54,7 +65,7 @@ const ExperienceSection = () => {
                   </span>
                 </div>
                 <p className="text-muted-foreground">{exp.description}</p>
-              </div>
+              </a>
             </div>
           ))}
         </div>
