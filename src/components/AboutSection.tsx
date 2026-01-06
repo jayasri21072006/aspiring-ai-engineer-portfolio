@@ -38,18 +38,24 @@ const AboutSection = () => {
       <div className="grid md:grid-cols-2 gap-12 items-center">
         <div className="space-y-6">
           <p className="text-muted-foreground leading-relaxed text-lg">
-            I'm an aspiring AI & ML Engineer with a strong foundation in Python, SQL, and applied 
-            machine learning, backed by hands-on internships and production-level projects.
+            I am an aspiring AI & Machine Learning Engineer with a strong foundation in Python, SQL, 
+            and applied machine learning, supported by hands-on internships and production-level projects.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            I have proven ability to design, train, and deploy ML models, including end-to-end 
-            data pipelines and real-world applications. Experienced in deep learning, generative AI, 
-            and backend integration with Flask APIs.
+            I have proven experience in designing, training, evaluating, and deploying ML models, 
+            including end-to-end data pipelines and real-world applications. My technical expertise 
+            spans machine learning, deep learning, generative AI, and backend integration using Flask and Streamlit.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            With a problem-solving mindset, I consistently deliver scalable, data-driven solutions 
-            and actively sharpen my skills through advanced coursework, competitive platforms, 
-            and continuous experimentation.
+            Through projects such as a Crypto Liquidity Predictor, I have built complete ML solutions 
+            involving data preprocessing, exploratory data analysis, feature engineering, and model deployment. 
+            I have developed interactive web applications to serve trained models, implemented Random Forest 
+            regression, and documented projects with clear EDA and system design reports.
+          </p>
+          <p className="text-muted-foreground leading-relaxed">
+            I bring a strong problem-solving mindset, with the ability to translate data into scalable, 
+            data-driven solutions, and I actively sharpen my skills through advanced coursework, competitive 
+            platforms, and continuous experimentation with modern AI tools and frameworks.
           </p>
           
           <div className="pt-4">
