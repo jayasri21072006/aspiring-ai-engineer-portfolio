@@ -14,9 +14,9 @@ const HeroSection = () => {
             Welcome to my portfolio
           </p>
           
-          <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold mb-6">
+          <h1 className="font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold mb-6">
             Hi, I'm{" "}
-            <span className="text-gradient">Jayasri T</span>
+            <span className="text-gradient whitespace-nowrap">Jayasri T</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground mb-4 font-display">
