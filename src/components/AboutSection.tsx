@@ -1,25 +1,25 @@
-import { Brain, Code, Database, Sparkles } from "lucide-react";
+import { Brain, Database, Sparkles, BarChart3 } from "lucide-react";
 
 const highlights = [
   {
     icon: Brain,
     title: "Machine Learning",
-    description: "Deep learning, CNNs, and end-to-end ML pipelines"
+    skills: ["ML", "Deep Learning", "Scikit-learn", "ML Pipelines"]
   },
   {
     icon: Sparkles,
-    title: "Generative AI",
-    description: "Building AI-powered applications and solutions"
+    title: "AI & NLP",
+    skills: ["Generative AI", "NLP", "AI"]
+  },
+  {
+    icon: BarChart3,
+    title: "Data Science",
+    skills: ["Statistics", "Data Analysis"]
   },
   {
     icon: Database,
-    title: "Data Science",
-    description: "Data analysis, SQL, and MongoDB expertise"
-  },
-  {
-    icon: Code,
-    title: "Full Stack",
-    description: "Python, Flask APIs, and backend integration"
+    title: "Databases",
+    skills: ["SQL", "MongoDB", "Vector DB"]
   }
 ];
 
@@ -71,7 +71,13 @@ const AboutSection = () => {
                 <item.icon className="h-6 w-6 text-primary" />
               </div>
               <h3 className="font-display font-semibold mb-2">{item.title}</h3>
-              <p className="text-sm text-muted-foreground">{item.description}</p>
+              <div className="flex flex-wrap gap-1">
+                {item.skills.map((skill, skillIndex) => (
+                  <span key={skillIndex} className="text-xs text-muted-foreground bg-primary/5 px-2 py-0.5 rounded">
+                    {skill}
+                  </span>
+                ))}
+              </div>
             </div>
           ))}
         </div>
