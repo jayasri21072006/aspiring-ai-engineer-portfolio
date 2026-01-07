@@ -60,6 +60,49 @@ This project is built with:
 - shadcn-ui
 - Tailwind CSS
 
+---
+
+## Featured Project: Crypto Liquidity Predictor 🚀
+
+**Project Overview**
+
+A Machine Learning-based web application that predicts cryptocurrency liquidity using recent market trends. It combines robust data preprocessing, thorough exploratory analysis, and a RandomForest regression model, exposed through an interactive Streamlit UI for exploration and live predictions.
+
+**Tech Stack**
+
+- Python 3.11+
+- Scikit-learn
+- Pandas, NumPy
+- Matplotlib, Seaborn
+- Streamlit
+- Joblib
+
+**Features**
+
+- Data preprocessing & feature engineering
+- Exploratory Data Analysis (EDA) with visualizations
+- RandomForest regression model with evaluation metrics
+- Interactive Streamlit web interface for predictions
+- Model serialization and reproducible setup
+- Project reports: EDA, High-Level Design (HLD), Low-Level Design (LLD), and final summary
+
+**Repository includes**
+
+- Source code (data processing, model scripts, Streamlit app)
+- Clear README and setup instructions
+- Example datasets and serialized model (Joblib)
+- Reports and documentation (EDA, HLD, LLD)
+
+**Quick start**
+
+1. Clone repo: `git clone https://github.com/jayasri21072006/crypto-liquidity-predictor`
+2. Install: `pip install -r requirements.txt`
+3. Run Streamlit demo: `streamlit run app.py`
+
+---
+
+If you'd like, I can also add a dedicated project page in the portfolio site with the full README content, screenshots, and inline EDA visualizations.
+
 ## How can I deploy this project?
 
 Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.

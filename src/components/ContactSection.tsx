@@ -5,7 +5,7 @@ const ContactSection = () => {
   return (
     <section id="contact" className="section-container">
       <div className="text-center mb-16">
-        <p className="text-primary font-medium mb-2 tracking-widest uppercase text-sm">
+        <p className="section-label">
           Get In Touch
         </p>
         <h2 className="font-display text-4xl md:text-5xl font-bold mb-6">
@@ -97,9 +97,9 @@ const ContactSection = () => {
                   className="justify-start h-14 px-6 glow-primary"
                   asChild
                 >
-                  <a href="mailto:jayasri21072006@gmail.com">
-                    <Send className="mr-3 h-5 w-5" />
-                    Send an Email
+                  <a href="mailto:jayasri21072006@gmail.com" className="flex items-center">
+                    <Mail className="mr-3 h-5 w-5 text-primary" />
+                    <span className="font-medium">jayasri21072006@gmail.com</span>
                   </a>
                 </Button>
               </div>

@@ -1,56 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
-
 @layer base {
   :root {
-    --background: 222 47% 6%;
+    --background: 222 47% 12%;
     --foreground: 210 40% 98%;
 
-    --card: 222 47% 9%;
+    --card: 222 47% 14%;
     --card-foreground: 210 40% 98%;
 
-    --popover: 222 47% 9%;
+    --popover: 222 47% 14%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 186 100% 50%;
-    --primary-foreground: 222 47% 6%;
+    --primary: 272 76% 70%;
+    --primary-foreground: 260 20% 8%;
 
-    --secondary: 222 30% 15%;
+    --secondary: 260 24% 14%;
     --secondary-foreground: 210 40% 98%;
 
-    --muted: 222 30% 12%;
-    --muted-foreground: 215 20% 55%;
+    --muted: 260 18% 30%;
+    --muted-foreground: 205 78% 86%;
 
-    --accent: 270 80% 60%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 280 90% 75%;
+    --accent-foreground: 222 47% 6%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 222 30% 18%;
-    --input: 222 30% 18%;
-    --ring: 186 100% 50%;
+    --border: 225 20% 22%;
+    --input: 225 20% 18%;
+    --ring: 272 76% 70%;
 
     --radius: 0.75rem;
 
-    /* Custom tokens */
-    --gradient-primary: linear-gradient(135deg, hsl(186 100% 50%) 0%, hsl(220 100% 60%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(270 80% 60%) 0%, hsl(186 100% 50%) 100%);
-    --gradient-hero: linear-gradient(180deg, hsl(222 47% 6%) 0%, hsl(222 47% 10%) 100%);
-    --glow-primary: 0 0 40px hsl(186 100% 50% / 0.3);
-    --glow-accent: 0 0 60px hsl(270 80% 60% / 0.2);
+    /* Custom tokens (lavender palette adjusted for brightness) */
+    --gradient-primary: linear-gradient(135deg, hsl(265 72% 70%) 0%, hsl(290 78% 64%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(280 90% 80%) 0%, hsl(250 70% 66%) 100%);
+    --gradient-hero: linear-gradient(180deg, hsl(225 40% 10%) 0%, hsl(225 40% 14%) 100%);
+    --glow-primary: 0 0 50px hsl(265 80% 66% / 0.28);
+    --glow-accent: 0 0 60px hsl(280 90% 78% / 0.22);
 
-    --sidebar-background: 222 47% 6%;
+    --sidebar-background: 222 47% 12%;
     --sidebar-foreground: 210 40% 98%;
     --sidebar-primary: 186 100% 50%;
     --sidebar-primary-foreground: 222 47% 6%;
-    --sidebar-accent: 222 30% 15%;
+    --sidebar-accent: 222 30% 18%;
     --sidebar-accent-foreground: 210 40% 98%;
-    --sidebar-border: 222 30% 18%;
+    --sidebar-border: 222 30% 22%;
     --sidebar-ring: 186 100% 50%;
+
+    /* Text color tokens */
+    --heading: 230 68% 60%; /* dark-blue for headings */
+    --text: 205 84% 96%; /* slightly brighter for body paragraphs */
+    --text-muted: 205 78% 86%; /* slightly brighter muted text */
+    --lead-color: 265 48% 74%; /* keep a variant for lead text */
   }
 }
 
@@ -67,17 +73,86 @@
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Space Grotesk', sans-serif;
   }
+
+  /* Make all headings consistently bold and use the heading color */
+  h1, h2, h3, h4, h5, h6 {
+    color: hsl(var(--heading));
+    font-weight: 700;
+  }
+
+  /* Ensure font-display utility also renders bold headings consistently */
+  .font-display {
+    font-weight: 700;
+  }
+  h1 {
+    font-weight: 800; /* stronger weight for primary title */
+    font-size: 2.25rem;
+    line-height: 1.05;
+    margin-bottom: 0.5rem;
+  }
+
+  h2 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  h3, h4, h5, h6 {
+    font-weight: 700;
+  }
+
+  p {
+    color: hsl(var(--text));
+    line-height: 1.8;
+    margin-bottom: 1rem;
+  }
+
+  .lead {
+    color: hsl(var(--lead-color));
+    font-size: 1.05rem;
+  }
+
+  /* Override muted foreground utility from theme to use our para tone */
+  .text-muted-foreground {
+    color: hsl(var(--text-muted)) !important;
+    font-weight: 600;
+  }
+
+  /* Also provide a helper class for emphasized paragraph text */
+  .text-para-accent {
+    color: hsl(var(--text));
+  }
+  /* Links and navigation */
+  a {
+    color: hsl(272 76% 66%);
+    text-decoration: none;
+    text-underline-offset: 0;
+  }
+
+  a:hover {
+    color: hsl(290 78% 60%);
+    text-decoration: none;
+    text-decoration-skip-ink: none;
+  }
+
+  .nav-link {
+    color: hsl(var(--text-muted));
+    transition: color 0.25s ease;
+  }
+
+  .nav-link:hover {
+    color: hsl(var(--primary));
+  }
 }
+
 
 @layer components {
   .text-gradient {
-    @apply bg-clip-text text-transparent;
-    background-image: var(--gradient-primary);
+    color: hsl(var(--heading));
   }
 
   .text-gradient-accent {
-    @apply bg-clip-text text-transparent;
-    background-image: var(--gradient-accent);
+    color: hsl(var(--heading));
   }
 
   .glow-primary {
@@ -89,7 +164,12 @@
   }
 
   .card-glass {
-    @apply bg-card/50 backdrop-blur-xl border border-border/50;
+    @apply bg-card/70 backdrop-blur-xl border border-border/40 shadow-md;
+  }
+
+  /* Reusable section label used above major headings */
+  .section-label {
+    @apply text-primary font-semibold tracking-widest uppercase inline-block text-sm md:text-base px-3 py-1 rounded bg-primary/5 mb-3;
   }
 
   .section-container {

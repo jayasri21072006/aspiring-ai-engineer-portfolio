@@ -5,21 +5,21 @@ const experiences = [
     role: "Node.js Intern",
     company: "Askan Technologies",
     period: "Dec 2025",
-    description: "Built backend services and API integrations",
+    description: "Built RESTful APIs, implemented authentication, integrated third-party services, and wrote unit tests to improve backend reliability.",
     certificateUrl: "https://github.com/jayasri21072006/pro/blob/main/Askan%20Node.js%20intern.pdf"
   },
   {
     role: "ML Intern",
     company: "Saiket Systems",
     period: "Jun 2025 - Jul 2025",
-    description: "Worked on machine learning projects and model development",
+    description: "Developed ML pipelines: data cleaning, feature engineering, model training and evaluation; collaborated on model deployment and monitoring.",
     certificateUrl: "https://github.com/jayasri21072006/pro/blob/main/saiket%20Ml%20intern.pdf"
   },
   {
     role: "Python Intern",
     company: "Cognifyz Technologies",
     period: "Feb 2025 - Mar 2025",
-    description: "Developed Python-based solutions and automation scripts",
+    description: "Automated ETL workflows, created reusable Python modules, and implemented tests and CI steps to ensure code quality.",
     certificateUrl: "https://github.com/jayasri21072006/pro/blob/main/cognifyz%20python%20Intern.pdf"
   }
 ];
@@ -28,7 +28,7 @@ const ExperienceSection = () => {
   return (
     <section id="experience" className="section-container">
       <div className="text-center mb-16">
-        <p className="text-primary font-medium mb-2 tracking-widest uppercase text-sm">
+        <p className="section-label">
           Career Journey
         </p>
         <h2 className="font-display text-4xl md:text-5xl font-bold mb-6">

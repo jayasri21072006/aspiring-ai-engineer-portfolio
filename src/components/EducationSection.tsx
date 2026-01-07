@@ -4,21 +4,25 @@ const courses = [
   {
     name: "Google Data Analytics",
     platform: "Coursera",
+    summary: "Completed an end-to-end data analysis program covering data cleaning, visualization, and reporting using spreadsheets and SQL.",
     links: [{ label: "View Certificate", url: "https://github.com/jayasri21072006/pro/blob/main/Google%20Data%20analytics%20professional%20certificate.pdf" }]
   },
   {
     name: "Machine Learning",
     platform: "Coursera & AWS",
+    summary: "Learned core machine learning concepts and completed hands-on projects focused on practical model building.",
     links: [{ label: "View Certificate", url: "https://github.com/jayasri21072006/pro/blob/main/ML%20certification%20-Coursera%2CAWS.pdf" }]
   },
   {
     name: "MongoDB",
     platform: "MongoDB University",
+    summary: "Studied NoSQL fundamentals and implemented practical data modeling solutions using MongoDB.",
     links: [{ label: "View Certificate", url: "https://github.com/jayasri21072006/pro/blob/main/MongoDB.pdf" }]
   },
   {
     name: "Data Science & Generative AI",
     platform: "PW Skills & IBM",
+    summary: "Completed comprehensive data science training combined with hands-on generative AI techniques and projects.",
     links: [
       { label: "Data Science", url: "https://github.com/jayasri21072006/pro/blob/main/pw%20skills%20DS%20with%20GenAI.pdf" },
       { label: "Generative AI", url: "https://github.com/jayasri21072006/pro/blob/main/Gen%20AI%20certfication.pdf" }
@@ -27,6 +31,7 @@ const courses = [
   {
     name: "SQL Certification",
     platform: "HackerRank & CodeChef",
+    summary: "Gained practical expertise in SQL querying, including joins, aggregates, and query optimization techniques.",
     links: [{ label: "View Certificate", url: "https://github.com/jayasri21072006/pro/blob/main/SQL%20certification.pdf" }]
   }
 ];
@@ -35,15 +40,15 @@ const EducationSection = () => {
   return (
     <section id="education" className="section-container">
       <div className="text-center mb-16">
-        <p className="text-primary font-medium mb-2 tracking-widest uppercase text-sm">
+        <p className="section-label">
           Learning Journey
         </p>
         <h2 className="font-display text-4xl md:text-5xl font-bold mb-6">
-          Education & <span className="text-gradient">Certifications</span>
+          Education & Certifications
         </h2>
       </div>
       
-      <div className="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+      <div className="grid grid-cols-1 gap-8 max-w-5xl mx-auto">
         {/* Education */}
         <div className="card-glass rounded-2xl p-8">
           <div className="flex items-center gap-3 mb-6">
@@ -77,24 +82,25 @@ const EducationSection = () => {
           
           <ul className="space-y-2">
             {courses.map((course, index) => (
-              <li key={index} className="p-3 -mx-3 rounded-lg hover:bg-primary/5 transition-all duration-300">
-                <div className="flex items-start gap-3">
-                  <ChevronRight className="h-4 w-4 text-primary mt-1 flex-shrink-0" />
+              <li key={index} className="p-4 -mx-3 rounded-lg hover:bg-primary/5 transition-all duration-300 md:p-5">
+                <div className="flex items-start gap-4">
+                  <ChevronRight className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
                   <div className="flex-1 min-w-0">
-                    <p className="text-sm font-medium text-foreground">
+                    <p className="text-base md:text-lg font-semibold text-foreground">
                       {course.name}
                     </p>
-                    <p className="text-xs text-muted-foreground mb-2">{course.platform}</p>
-                    <div className="flex flex-wrap gap-2">
+                    <p className="text-sm text-muted-foreground mb-1">{course.platform}</p>
+                    <p className="text-sm text-foreground mb-2 font-medium">{course.summary}</p>
+                    <div className="flex flex-wrap gap-3">
                       {course.links.map((link, linkIndex) => (
                         <a
                           key={linkIndex}
                           href={link.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1 text-xs text-primary hover:text-primary/80 hover:underline transition-all duration-300"
+                          className="inline-flex items-center gap-2 text-sm text-primary hover:text-primary/80 transition-all duration-300"
                         >
-                          <ExternalLink className="h-3 w-3" />
+                          <ExternalLink className="h-4 w-4" />
                           {link.label}
                         </a>
                       ))}

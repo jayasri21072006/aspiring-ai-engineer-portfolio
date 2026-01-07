@@ -14,16 +14,15 @@ const HeroSection = () => {
             Welcome to my portfolio
           </p>
           
-          <h1 className="font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold mb-6">
-            Hi, I'm{" "}
-            <span className="text-gradient whitespace-nowrap">Jayasri T</span>
+          <h1 className="font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold mb-6 text-heading">
+            <span className="whitespace-nowrap">Hi, I'm <span className="text-gradient">Jayasri T</span></span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-muted-foreground mb-4 font-display">
-            Aspiring AI & ML Engineer
+          <p className="text-xl md:text-2xl text-foreground mb-4 font-display font-semibold">
+            AI & ML Engineer
           </p>
           
-          <p className="max-w-2xl mx-auto text-muted-foreground mb-8 leading-relaxed">
+          <p className="max-w-2xl mx-auto text-foreground mb-8 leading-relaxed font-medium">
             Building intelligent solutions with strong foundations in Python, machine learning, 
             and data science. Passionate about designing, training, and deploying ML models 
             that solve real-world problems.
@@ -54,7 +53,7 @@ const HeroSection = () => {
               href="https://www.linkedin.com/in/jayasri-t-sri" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-primary transition-colors duration-300"
+              className="text-foreground hover:text-primary transition-colors duration-300"
             >
               <Linkedin className="h-6 w-6" />
             </a>
@@ -62,13 +61,13 @@ const HeroSection = () => {
               href="https://github.com/jayasri21072006" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-primary transition-colors duration-300"
+              className="text-foreground hover:text-primary transition-colors duration-300"
             >
               <Github className="h-6 w-6" />
             </a>
             <a 
               href="mailto:jayasri21072006@gmail.com"
-              className="text-muted-foreground hover:text-primary transition-colors duration-300"
+              className="text-foreground hover:text-primary transition-colors duration-300"
             >
               <Mail className="h-6 w-6" />
             </a>
@@ -76,7 +75,7 @@ const HeroSection = () => {
         </div>
         
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
-          <ArrowDown className="h-6 w-6 text-muted-foreground" />
+          <ArrowDown className="h-6 w-6 text-foreground" />
         </div>
       </div>
     </section>

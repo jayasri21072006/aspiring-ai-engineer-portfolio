@@ -19,15 +19,12 @@ const SkillsSection = () => {
   return (
     <section id="skills" className="section-container">
       <div className="text-center mb-16">
-        <p className="text-primary font-medium mb-2 tracking-widest uppercase text-sm">
+        <p className="section-label">
           My Expertise
         </p>
         <h2 className="font-display text-4xl md:text-5xl font-bold mb-6">
           Skills & <span className="text-gradient">Technologies</span>
         </h2>
-        <p className="text-muted-foreground max-w-2xl mx-auto">
-          A comprehensive toolkit for building intelligent, data-driven applications
-        </p>
       </div>
       
       <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">

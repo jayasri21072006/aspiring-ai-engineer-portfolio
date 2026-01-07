@@ -3,8 +3,10 @@ import { Button } from "@/components/ui/button";
 
 const projects = [
   {
-    title: "Cryptocurrency Liquidity Predictor",
-    description: "ML-based prediction system for cryptocurrency liquidity analysis. Built with Python and deployed using Streamlit for real-time predictions.",
+    title: "Crypto Liquidity Predictor 🚀",
+    description: "A Machine Learning web app that predicts cryptocurrency liquidity from recent market data. Includes full data preprocessing, EDA, feature engineering, RandomForest regression, model evaluation, and an interactive Streamlit interface for exploration and live predictions.",
+    techStack: ["Python 3.11+", "Scikit-learn", "Pandas", "NumPy", "Matplotlib", "Seaborn", "Streamlit", "Joblib"],
+    features: ["Data preprocessing & feature engineering", "Exploratory Data Analysis (EDA)", "RandomForest regression", "Interactive Streamlit UI", "Model serialization (Joblib)", "Reports: EDA, HLD, LLD, Final Summary"],
     tags: ["Machine Learning", "Python", "Streamlit", "Data Analysis"],
     github: "https://github.com/jayasri21072006/crypto-liquidity-predictor",
     demo: "https://crypto-liquidity-predictor-jorq5yxc3mrkqfeovdcvuq.streamlit.app/"
@@ -15,7 +17,7 @@ const ProjectsSection = () => {
   return (
     <section id="projects" className="section-container">
       <div className="text-center mb-16">
-        <p className="text-primary font-medium mb-2 tracking-widest uppercase text-sm">
+        <p className="section-label">
           Featured Work
         </p>
         <h2 className="font-display text-4xl md:text-5xl font-bold mb-6">
@@ -40,16 +42,23 @@ const ProjectsSection = () => {
                 <p className="text-muted-foreground mb-4 leading-relaxed">
                   {project.description}
                 </p>
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {project.tags.map((tag, tagIndex) => (
-                    <span 
-                      key={tagIndex}
-                      className="text-xs px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/20"
-                    >
-                      {tag}
+
+                {/* Tech stack (compact) */}
+                <div className="flex flex-wrap gap-2 mb-3">
+                  {project.techStack?.slice(0, 6).map((tech, i) => (
+                    <span key={i} className="text-xs px-2 py-1 rounded-full bg-primary/5 text-primary border border-primary/10">
+                      {tech}
                     </span>
                   ))}
                 </div>
+
+                {/* Features */}
+                <ul className="text-sm text-primary mb-4 list-disc list-inside space-y-1 font-semibold max-w-md">
+                  {project.features?.map((f, fi) => (
+                    <li key={fi}>{f}</li>
+                  ))}
+                </ul>
+
                 <div className="flex gap-3">
                   <Button 
                     variant="outline" 
