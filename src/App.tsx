@@ -13,7 +13,10 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      {/* The basename below is CRITICAL for GitHub Pages. 
+          It matches your repository name exactly.
+      */}
+      <BrowserRouter basename="/aspiring-ai-engineer-portfolio">
         <Routes>
           <Route path="/" element={<Index />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
