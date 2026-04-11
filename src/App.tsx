@@ -176,7 +176,7 @@ const Experience = () => (
             icon: "🐍"
           },
           {
-            title: "Gen AI-Powered Job Simulation",
+            title: "Tata Virtual Internship",
             comp: "Tata iQ · Virtual via Forage",
             time: "Completed",
             desc: "Completed a virtual internship simulation focused on real-world applications of Generative AI, prompt engineering, and AI-powered workflows.",
@@ -325,8 +325,8 @@ const achievements = [
     bg: "from-yellow-50 to-orange-50",
     border: "border-yellow-200",
     title: "Flipkart Grid 7.0",
-    subtitle: "Qualified Round 2",
-    detail: "Cleared Round 2 of Flipkart's engineering challenge.",
+    subtitle: "Selected for Round 2",
+    detail: "Successfully selected for Round 2 of Flipkart's national engineering challenge, clearing the highly competitive initial rounds.",
     tags: ["Competitive Programming","Software Engineering","System Design"],
   },
   {
