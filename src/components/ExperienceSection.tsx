@@ -2,6 +2,13 @@ import { ExternalLink } from "lucide-react";
 
 const experiences = [
   {
+    role: "Gen AI-Powered Job Simulation",
+    company: "Tata iQ · Virtual Internship via Forage",
+    period: "Completed",
+    description: "Completed a virtual internship simulation focused on real-world applications of Generative AI, including AI-powered workflows, prompt engineering, and practical deployment.",
+    certificateUrl: "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/ifobHAoMjQs9s6bKS/gMTdCXwDdLYoXZ3wG_ifobHAoMjQs9s6bKS_jk9FrdQPddzYXuNSH_1753200293130_completion_certificate.pdf"
+  },
+  {
     role: "Node.js Intern",
     company: "Askan Technologies",
     period: "Dec 2025",

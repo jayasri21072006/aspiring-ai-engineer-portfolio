@@ -3,6 +3,23 @@ import { Button } from "@/components/ui/button";
 
 const projects = [
   {
+    title: "Examination Monitoring System",
+    description: "Real-time AI-powered exam proctoring system using YOLOv8, MediaPipe, and OpenCV. Detects suspicious behaviors, logs incidents automatically, and raises alerts.",
+    techStack: ["Python", "YOLOv8", "MediaPipe", "OpenCV", "Streamlit"],
+    features: ["Real-time behavior detection", "Incident logging", "Automated alerts", "Multi-camera support"],
+    tags: ["AI", "Computer Vision", "Python"],
+    github: "https://github.com/jayasri21072006/examination-monitoring-system"
+  },
+  {
+    title: "Sentiment Analysis with Word Cloud",
+    description: "NLP web app selected for Smart India Hackathon 2025. Analyzes stakeholder comments to classify sentiment and visualize themes via interactive word clouds.",
+    techStack: ["Python", "NLP", "Streamlit", "Pandas", "WordCloud"],
+    features: ["Sentiment classification", "Concise summaries", "Interactive word clouds", "Stakeholder data analysis"],
+    tags: ["NLP", "AI", "Streamlit"],
+    github: "https://github.com/jayasri21072006/sentiment_analysis_with_wordcloud",
+    demo: "https://sentimentanalysiswithwordcloud.streamlit.app/"
+  },
+  {
     title: "Crypto Liquidity Predictor 🚀",
     description: "A Machine Learning web app that predicts cryptocurrency liquidity from recent market data. Includes full data preprocessing, EDA, feature engineering, RandomForest regression, model evaluation, and an interactive Streamlit interface for exploration and live predictions.",
     techStack: ["Python 3.11+", "Scikit-learn", "Pandas", "NumPy", "Matplotlib", "Seaborn", "Streamlit", "Joblib"],

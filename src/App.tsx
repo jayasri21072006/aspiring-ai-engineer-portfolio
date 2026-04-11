@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Toaster } from "./components/ui/sonner.tsx";
 import { TooltipProvider } from "./components/ui/tooltip.tsx";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
@@ -15,7 +14,6 @@ const GH_ICON = (
   </svg>
 );
 
-/* ══════════════ SECTION HEADER ══════════════ */
 const SectionHeader = ({ title, sub }: { title: string; sub: string }) => (
   <div className="text-center mb-12">
     <h2 className="text-3xl font-extrabold text-slate-900 mb-2">{title}</h2>
@@ -24,7 +22,6 @@ const SectionHeader = ({ title, sub }: { title: string; sub: string }) => (
   </div>
 );
 
-/* ══════════════ NAV ══════════════ */
 const NavBar = () => (
   <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100 px-6 py-3.5 flex items-center justify-between shadow-sm">
     <span className="font-black text-slate-800 text-xl tracking-tight">
@@ -41,17 +38,14 @@ const NavBar = () => (
   </nav>
 );
 
-/* ══════════════ HERO ══════════════ */
 const Hero = () => (
   <section id="about" className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-4 text-center pt-20"
     style={{ background: "linear-gradient(135deg, #f5f3ff 0%, #eef2ff 50%, #f0f9ff 100%)" }}>
-    {/* Decorative blobs */}
     <div className="absolute top-20 left-10 w-72 h-72 rounded-full opacity-20 blur-3xl"
       style={{ background: "radial-gradient(circle, #8b5cf6, transparent)" }} />
     <div className="absolute bottom-20 right-10 w-64 h-64 rounded-full opacity-15 blur-3xl"
       style={{ background: "radial-gradient(circle, #6366f1, transparent)" }} />
 
-    {/* Avatar */}
     <div className="relative mb-6">
       <div className="w-32 h-32 rounded-full flex items-center justify-center text-white text-4xl font-black shadow-2xl ring-4 ring-white ring-offset-4 ring-offset-violet-100"
         style={{ background: "linear-gradient(135deg, #7c3aed, #4f46e5)" }}>
@@ -68,29 +62,21 @@ const Hero = () => (
     </p>
     <p className="max-w-lg text-slate-500 text-base leading-relaxed mb-8">
       Passionate about building intelligent systems, exploring Generative AI, and solving hard problems.
-      Pursuing B.E in AI &amp; ML with a CGPA of{" "}
-      <span className="font-extrabold text-violet-700">9.35</span> (up to 5th Semester).
+      Pursuing B.Tech in AI &amp; DS with a CGPA of{" "}
+      <span className="font-extrabold text-violet-700">9.40</span> (up to 4th Semester).
     </p>
 
     <div className="flex gap-3 flex-wrap justify-center mb-14">
-      <a href="#projects"
-        className="px-6 py-2.5 rounded-full text-sm font-bold text-white shadow-lg hover:shadow-violet-200 hover:-translate-y-0.5 transition-all"
-        style={{ background: "linear-gradient(135deg,#7c3aed,#4f46e5)" }}>
-        View Projects
-      </a>
-      <a href="#contact"
-        className="px-6 py-2.5 rounded-full text-sm font-bold text-violet-700 border-2 border-violet-200 hover:border-violet-400 hover:bg-violet-50 transition-all">
-        Contact Me
-      </a>
+      <a href="#projects" className="px-6 py-2.5 rounded-full text-sm font-bold text-white shadow-lg hover:shadow-violet-200 hover:-translate-y-0.5 transition-all" style={{ background: "linear-gradient(135deg,#7c3aed,#4f46e5)" }}>View Projects</a>
+      <a href="#contact" className="px-6 py-2.5 rounded-full text-sm font-bold text-violet-700 border-2 border-violet-200 hover:border-violet-400 hover:bg-violet-50 transition-all">Contact Me</a>
     </div>
 
-    {/* Stats */}
     <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 w-full max-w-xl">
       {[
-        { label: "CGPA", value: "9.35", icon: "🎯" },
+        { label: "CGPA", value: "9.40", icon: "🎯" },
         { label: "DSA Solved", value: "200+", icon: "💻" },
         { label: "Internship", value: "1+", icon: "🏢" },
-        { label: "Projects", value: "2+", icon: "🚀" },
+        { label: "Projects", value: "3", icon: "🚀" },
       ].map(({ label, value, icon }) => (
         <div key={label} className="bg-white/70 backdrop-blur rounded-2xl p-4 border border-white shadow-sm text-center">
           <div className="text-2xl mb-1">{icon}</div>
@@ -102,34 +88,33 @@ const Hero = () => (
   </section>
 );
 
-/* ══════════════ EDUCATION ══════════════ */
 const Education = () => (
   <section id="education" className="py-20 bg-white px-4">
     <div className="max-w-3xl mx-auto">
       <SectionHeader title="Education" sub="Academic Background" />
-      <div className="relative pl-8 border-l-2 border-violet-100">
-        <div className="absolute -left-2.5 top-0 w-5 h-5 rounded-full bg-violet-600 border-2 border-white shadow" />
-        <div className="bg-gradient-to-br from-violet-50 to-indigo-50 rounded-2xl p-8 border border-violet-100 shadow-sm">
+      <div className="relative pl-8 border-l-2 border-indigo-100">
+        <div className="absolute -left-2.5 top-0 w-5 h-5 rounded-full bg-indigo-600 border-2 border-white shadow" />
+        <div className="bg-gradient-to-br from-indigo-50 to-blue-50 rounded-2xl p-8 border border-indigo-100 shadow-sm">
           <div className="flex items-start gap-5">
             <div className="w-14 h-14 rounded-2xl flex items-center justify-center text-2xl shadow flex-shrink-0"
-              style={{ background: "linear-gradient(135deg,#7c3aed,#4f46e5)" }}>
+              style={{ background: "linear-gradient(135deg,#4f46e5,#2563eb)" }}>
               🎓
             </div>
             <div className="flex-1 min-w-0">
               <div className="flex items-start justify-between flex-wrap gap-2 mb-1">
-                <h3 className="text-lg font-extrabold text-slate-900">B.E – Artificial Intelligence &amp; Machine Learning</h3>
-                <span className="text-xs bg-emerald-100 text-emerald-700 font-bold px-3 py-1 rounded-full flex-shrink-0">● Ongoing</span>
+                <h3 className="text-lg font-extrabold text-slate-900">B.Tech - Artificial Intelligence &amp; Data Science</h3>
+                <span className="text-xs bg-emerald-100 text-emerald-700 font-bold px-3 py-1 rounded-full flex-shrink-0">● Pursuing</span>
               </div>
-              <p className="text-violet-600 font-semibold text-sm mb-5">
-                Sri Manakula Vinayagar Engineering College, Puducherry
+              <p className="text-indigo-600 font-semibold text-sm mb-5">
+                Anand Institute of Higher Technology, Chennai
               </p>
               <div className="flex flex-wrap gap-3">
-                <div className="bg-white rounded-xl px-5 py-3 shadow-sm border border-violet-100 text-center">
-                  <p className="text-2xl font-black text-violet-700">9.35</p>
-                  <p className="text-xs text-slate-500 mt-0.5 font-medium">CGPA · Up to 5th Sem</p>
-                </div>
                 <div className="bg-white rounded-xl px-5 py-3 shadow-sm border border-indigo-100 text-center">
-                  <p className="text-2xl font-black text-indigo-600">2022–26</p>
+                  <p className="text-2xl font-black text-indigo-700">9.40</p>
+                  <p className="text-xs text-slate-500 mt-0.5 font-medium">CGPA · Up to 4th Sem</p>
+                </div>
+                <div className="bg-white rounded-xl px-5 py-3 shadow-sm border border-blue-100 text-center">
+                  <p className="text-2xl font-black text-blue-600">2023–27</p>
                   <p className="text-xs text-slate-500 mt-0.5 font-medium">Batch</p>
                 </div>
               </div>
@@ -141,188 +126,74 @@ const Education = () => (
   </section>
 );
 
-/* ══════════════ EXPERIENCE ══════════════ */
 const Experience = () => (
   <section id="experience" className="py-20 px-4" style={{ background: "#f8f7ff" }}>
     <div className="max-w-3xl mx-auto">
       <SectionHeader title="Experience" sub="Internships & Training" />
-      <div className="relative border-l-2 border-violet-200 pl-8 ml-2">
-        <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-violet-600 border-2 border-white shadow" />
-        <div className="bg-white rounded-2xl p-7 shadow border border-slate-100 hover:shadow-md transition-shadow">
-          <div className="flex items-start justify-between flex-wrap gap-3 mb-4">
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-xl flex items-center justify-center text-white font-black text-sm shadow flex-shrink-0"
-                style={{ background: "linear-gradient(135deg,#2563eb,#0d9488)" }}>
-                TiQ
+      <div className="relative border-l-2 border-violet-200 pl-8 ml-2 space-y-8">
+        {[
+          { role: "Node.js Intern", company: "Askan Technologies", period: "Dec 2025", desc: "Built RESTful APIs, implemented auth, and integrated services.", icon: "🚀", cert: "https://github.com/jayasri21072006/pro/blob/main/Askan%20Node.js%20intern.pdf" },
+          { role: "ML Intern", company: "Saiket Systems", period: "Jun-Jul 2025", desc: "Developed ML pipelines and model monitoring solutions.", icon: "🧠", cert: "https://github.com/jayasri21072006/pro/blob/main/saiket%20Ml%20intern.pdf" },
+          { role: "Python Intern", company: "Cognifyz", period: "Feb-Mar 2025", desc: "Automated ETL workflows and created reusable modules.", icon: "🐍", cert: "https://github.com/jayasri21072006/pro/blob/main/cognifyz%20python%20Intern.pdf" },
+          { role: "Gen AI Simulation", company: "Tata iQ · Forage", period: "Completed", desc: "Real-world Gen AI apps and prompt engineering.", icon: "🤖", cert: CERT_URL }
+        ].map((exp, idx) => (
+          <div key={idx} className="relative">
+            <div className="absolute -left-[41px] top-0 w-4 h-4 rounded-full bg-violet-600 border-2 border-white shadow" />
+            <div className="bg-white rounded-2xl p-7 shadow border border-slate-100">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 rounded-xl flex items-center justify-center text-white font-black text-xl shadow" style={{ background: "linear-gradient(135deg,#7c3aed,#4f46e5)" }}>{exp.icon}</div>
+                <div><h3 className="text-lg font-black text-slate-900">{exp.role}</h3><p className="text-violet-600 font-bold text-sm">{exp.company}</p></div>
               </div>
-              <div>
-                <h3 className="text-lg font-extrabold text-slate-900">Gen AI-Powered Job Simulation</h3>
-                <p className="text-violet-600 font-semibold text-sm">Tata iQ · Virtual Internship via Forage</p>
-              </div>
+              <p className="text-slate-600 text-sm mb-4">{exp.desc}</p>
+              <a href={exp.cert} target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-violet-700 hover:text-violet-900 transition-colors">📄 View Certificate →</a>
             </div>
-            <span className="text-xs bg-blue-100 text-blue-700 font-bold px-3 py-1 rounded-full">Completed</span>
           </div>
-          <p className="text-slate-600 text-sm leading-relaxed mb-4">
-            Completed a virtual internship simulation with <strong>Tata iQ</strong> through the Forage platform,
-            focused on real-world applications of <strong>Generative AI</strong> — including AI-powered workflows,
-            prompt engineering, and practical Gen AI deployment in professional contexts.
-          </p>
-          <div className="flex flex-wrap gap-2 mb-5">
-            {["Generative AI","Prompt Engineering","AI Workflows","Tata iQ","Forage"].map((tag) => (
-              <span key={tag} className="text-xs bg-violet-50 text-violet-700 border border-violet-200 px-2.5 py-1 rounded-full font-semibold">{tag}</span>
-            ))}
-          </div>
-          <a href={CERT_URL} target="_blank" rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-sm font-bold text-violet-700 hover:text-violet-900 transition-colors group">
-            <span className="w-7 h-7 rounded-full bg-violet-100 group-hover:bg-violet-200 flex items-center justify-center transition-colors">📄</span>
-            View Completion Certificate
-            <span className="group-hover:translate-x-1 transition-transform text-violet-400">→</span>
-          </a>
-        </div>
+        ))}
       </div>
     </div>
   </section>
-);
-
-/* ══════════════ PROJECTS ══════════════ */
-type Project = {
-  emoji: string; accentFrom: string; accentTo: string;
-  badge?: string; badgeCls: string;
-  title: string; subtitle: string; description: string;
-  tags: string[]; githubUrl: string; liveUrl?: string;
-};
-
-const projects: Project[] = [
-  {
-    emoji: "🎓", accentFrom: "#7c3aed", accentTo: "#4f46e5",
-    badgeCls: "bg-violet-100 text-violet-700",
-    title: "Examination Monitoring System",
-    subtitle: "AI-powered real-time exam proctoring",
-    description:
-      "Real-time exam proctoring system using YOLOv8, MediaPipe and OpenCV. Monitors multiple live camera feeds, detects suspicious behaviours (mobile phone use, copying, head-turning, group discussion), logs incidents automatically and raises escalation alerts when a risk score threshold is exceeded.",
-    tags: ["Python","Streamlit","YOLOv8","MediaPipe","OpenCV","Computer Vision"],
-    githubUrl: "https://github.com/jayasri21072006/examination-monitoring-system",
-  },
-  {
-    emoji: "💬", accentFrom: "#0d9488", accentTo: "#0891b2",
-    badge: "🏆 SIH 2025 · College Level",
-    badgeCls: "bg-amber-100 text-amber-700",
-    title: "Sentiment Analysis with Word Cloud",
-    subtitle: "NLP web app selected at Smart India Hackathon 2025",
-    description:
-      "AI-powered web app that analyses large volumes of stakeholder comments from public consultation platforms. Classifies sentiment (Positive / Neutral / Negative), generates concise summaries, and visualises dominant themes via an interactive word cloud — helping policy analysts interpret feedback at scale.",
-    tags: ["Python","Streamlit","NLP","WordCloud","Pandas","Matplotlib"],
-    githubUrl: "https://github.com/jayasri21072006/sentiment_analysis_with_wordcloud",
-    liveUrl: "https://sentimentanalysiswithwordcloud.streamlit.app/",
-  },
-];
-
-const ProjectCard = ({ p }: { p: Project }) => (
-  <div className="bg-white rounded-2xl border border-slate-100 shadow hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col overflow-hidden">
-    {/* Accent bar */}
-    <div className="h-1.5 w-full" style={{ background: `linear-gradient(90deg,${p.accentFrom},${p.accentTo})` }} />
-    <div className="p-7 flex flex-col flex-1">
-      <div className="flex items-start justify-between gap-3 mb-4">
-        <div className="flex items-center gap-3">
-          <div className="w-11 h-11 rounded-xl flex items-center justify-center text-xl shadow-md flex-shrink-0"
-            style={{ background: `linear-gradient(135deg,${p.accentFrom},${p.accentTo})` }}>
-            {p.emoji}
-          </div>
-          <div>
-            <h3 className="text-base font-extrabold text-slate-900 leading-snug">{p.title}</h3>
-            <p className="text-xs text-slate-400 mt-0.5">{p.subtitle}</p>
-          </div>
-        </div>
-        {p.badge && (
-          <span className={`text-xs font-bold px-2.5 py-1 rounded-full flex-shrink-0 ${p.badgeCls}`}>{p.badge}</span>
-        )}
-      </div>
-      <p className="text-slate-600 text-sm leading-relaxed mb-5 flex-1">{p.description}</p>
-      <div className="flex flex-wrap gap-1.5 mb-5">
-        {p.tags.map((t) => (
-          <span key={t} className="text-xs bg-slate-50 border border-slate-200 text-slate-600 px-2.5 py-1 rounded-full font-medium">{t}</span>
-        ))}
-      </div>
-      <div className="flex gap-2 flex-wrap">
-        <a href={p.githubUrl} target="_blank" rel="noopener noreferrer"
-          className="inline-flex items-center gap-1.5 px-4 py-2 bg-slate-900 text-white text-xs font-bold rounded-full hover:bg-slate-700 transition-colors shadow">
-          {GH_ICON} GitHub
-        </a>
-        {p.liveUrl && (
-          <a href={p.liveUrl} target="_blank" rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 px-4 py-2 text-white text-xs font-bold rounded-full hover:opacity-90 transition-opacity shadow"
-            style={{ background: `linear-gradient(135deg,${p.accentFrom},${p.accentTo})` }}>
-            ▶ Live Demo
-          </a>
-        )}
-      </div>
-    </div>
-  </div>
 );
 
 const Projects = () => (
   <section id="projects" className="py-20 bg-white px-4">
     <div className="max-w-5xl mx-auto">
-      <SectionHeader title="Projects" sub="Things I've Built" />
-      <div className="grid md:grid-cols-2 gap-6">
-        {projects.map((p) => <ProjectCard key={p.title} p={p} />)}
+      <SectionHeader title="Projects" sub="Featured AI Solutions" />
+      <div className="grid md:grid-cols-3 gap-6">
+        {[
+          { emoji: "🎓", title: "Proctoring System", sub: "YOLOv8 & MediaPipe", desc: "AI real-time exam monitoring system.", git: "https://github.com/jayasri21072006/examination-monitoring-system" },
+          { emoji: "🚀", title: "Crypto Predictor", sub: "ML Market Tool", desc: "RandomForest crypto trend predictions.", git: "https://github.com/jayasri21072006/crypto-liquidity-predictor", demo: "https://crypto-liquidity-predictor-jorq5yxc3mrkqfeovdcvuq.streamlit.app/" },
+          { emoji: "💬", title: "Sentiment App", sub: "NLP SIH 2025", desc: "Stakeholder sentiment analytics with WordCloud.", git: "https://github.com/jayasri21072006/sentiment_analysis_with_wordcloud", demo: "https://sentimentanalysiswithwordcloud.streamlit.app/" }
+        ].map((p, idx) => (
+          <div key={idx} className="bg-white rounded-2xl border border-slate-100 shadow-sm p-7 flex flex-col h-full hover:shadow-xl transition-all">
+            <div className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl shadow-sm mb-5 bg-slate-50">{p.emoji}</div>
+            <h3 className="text-lg font-black text-slate-900 mb-1">{p.title}</h3>
+            <p className="text-xs text-violet-500 font-bold uppercase tracking-wider mb-4">{p.sub}</p>
+            <p className="text-slate-600 text-sm mb-6 flex-grow">{p.desc}</p>
+            <div className="flex gap-2">
+              <a href={p.git} target="_blank" rel="noopener noreferrer" className="flex-1 text-center py-2 bg-slate-900 text-white text-xs font-bold rounded-lg hover:bg-slate-800">GitHub</a>
+              {p.demo && <a href={p.demo} target="_blank" rel="noopener noreferrer" className="flex-1 text-center py-2 bg-violet-600 text-white text-xs font-bold rounded-lg hover:bg-violet-700">Demo</a>}
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   </section>
 );
-
-/* ══════════════ ACHIEVEMENTS ══════════════ */
-const achievements = [
-  {
-    icon: "🛒",
-    color: "from-yellow-400 to-orange-500",
-    bg: "from-yellow-50 to-orange-50",
-    border: "border-yellow-200",
-    title: "Flipkart Grid 7.0",
-    subtitle: "Qualified Round 2",
-    detail: "Cleared Round 2 of Flipkart Grid 7.0 — one of India's most competitive engineering challenges, testing skills in software engineering, problem solving, and system design.",
-    tags: ["Competitive Programming","Software Engineering","System Design"],
-  },
-  {
-    icon: "💡",
-    color: "from-orange-500 to-red-500",
-    bg: "from-orange-50 to-red-50",
-    border: "border-orange-200",
-    title: "LeetCode — 200+ Problems Solved",
-    subtitle: "Data Structures & Algorithms · Java",
-    detail: "Solved 200+ DSA problems on LeetCode in Java, covering Arrays, Linked Lists, Trees, Graphs, Dynamic Programming, Sliding Window, and more.",
-    tags: ["Java","Arrays & Strings","Trees & Graphs","Dynamic Programming","Sliding Window"],
-  },
-  {
-    icon: "🏆",
-    color: "from-violet-500 to-indigo-600",
-    bg: "from-violet-50 to-indigo-50",
-    border: "border-violet-200",
-    title: "Smart India Hackathon 2025",
-    subtitle: "Selected — College Level (Internal Round)",
-    detail: "Sentiment Analysis project selected at the Internal SIH 2025 college round, competing with teams across departments on a real government problem statement.",
-    tags: ["AI/ML","NLP","Hackathon","Team Project"],
-  },
-];
 
 const Achievements = () => (
   <section id="achievements" className="py-20 px-4" style={{ background: "#f8f7ff" }}>
     <div className="max-w-5xl mx-auto">
-      <SectionHeader title="Achievements" sub="Milestones & Recognitions" />
+      <SectionHeader title="Achievements" sub="Milestones" />
       <div className="grid md:grid-cols-3 gap-6">
-        {achievements.map((a) => (
-          <div key={a.title} className={`bg-gradient-to-br ${a.bg} rounded-2xl border ${a.border} p-7 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 flex flex-col`}>
-            <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${a.color} flex items-center justify-center text-2xl shadow-md mb-4 flex-shrink-0`}>
-              {a.icon}
-            </div>
-            <h3 className="text-base font-extrabold text-slate-900 leading-snug mb-1">{a.title}</h3>
-            <p className="text-xs font-bold text-violet-600 mb-3">{a.subtitle}</p>
-            <p className="text-slate-600 text-sm leading-relaxed mb-4 flex-1">{a.detail}</p>
-            <div className="flex flex-wrap gap-1.5">
-              {a.tags.map((t) => (
-                <span key={t} className="text-xs bg-white/70 border border-white text-slate-600 px-2.5 py-0.5 rounded-full font-medium">{t}</span>
-              ))}
-            </div>
+        {[
+          { icon: "🛒", title: "Flipkart Grid 7.0", sub: "Qualified Round 2" },
+          { icon: "💡", title: "LeetCode 200+", sub: "Java DSA Specialist" },
+          { icon: "🏆", title: "SIH 2025 Selected", sub: "Internal Round" }
+        ].map((a, idx) => (
+          <div key={idx} className="bg-white rounded-2xl p-7 border border-slate-100 shadow-sm text-center">
+            <div className="text-3xl mb-4">{a.icon}</div>
+            <h3 className="text-base font-extrabold text-slate-900 mb-1">{a.title}</h3>
+            <p className="text-xs font-bold text-violet-600">{a.sub}</p>
           </div>
         ))}
       </div>
@@ -330,81 +201,20 @@ const Achievements = () => (
   </section>
 );
 
-/* ══════════════ CERTIFICATIONS ══════════════ */
 const Certifications = () => (
   <section id="certifications" className="py-20 bg-white px-4">
     <div className="max-w-3xl mx-auto">
-      <SectionHeader title="Certifications" sub="Verified Achievements" />
-      <div className="bg-gradient-to-br from-blue-50 to-teal-50 rounded-2xl p-7 border border-blue-100 shadow hover:shadow-md transition-shadow flex items-start gap-5">
-        <div className="w-16 h-16 rounded-2xl flex items-center justify-center text-2xl shadow-md flex-shrink-0"
-          style={{ background: "linear-gradient(135deg,#2563eb,#0d9488)" }}>
-          🤖
-        </div>
-        <div className="flex-1">
-          <div className="flex items-start justify-between gap-2 flex-wrap mb-1">
-            <h3 className="text-lg font-extrabold text-slate-900">Gen AI-Powered Job Simulation</h3>
-            <span className="text-xs bg-emerald-100 text-emerald-700 font-bold px-3 py-1 rounded-full">✓ Verified</span>
-          </div>
-          <p className="text-blue-600 font-bold text-sm mb-3">Tata iQ &amp; Forage</p>
-          <p className="text-slate-500 text-sm leading-relaxed mb-5">
-            Completed a Gen AI job simulation covering real-world AI applications, prompt design, and intelligent
-            workflow automation under Tata iQ's virtual internship programme.
-          </p>
-          <a href={CERT_URL} target="_blank" rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-5 py-2.5 text-white text-sm font-bold rounded-full shadow hover:opacity-90 transition-opacity"
-            style={{ background: "linear-gradient(135deg,#2563eb,#0d9488)" }}>
-            📄 View Certificate
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-);
-
-/* ══════════════ SKILLS ══════════════ */
-const skillGroups = [
-  {
-    icon: "🧠", label: "AI / ML & GenAI",
-    color: "text-violet-700", bg: "bg-violet-50", border: "border-violet-100", dot: "bg-violet-500",
-    items: ["Machine Learning","Deep Learning","Generative AI","NLP","Computer Vision","RAG Pipeline","Model Quantisation"],
-  },
-  {
-    icon: "💻", label: "Languages",
-    color: "text-indigo-700", bg: "bg-indigo-50", border: "border-indigo-100", dot: "bg-indigo-500",
-    items: ["Python","Java","JavaScript","TypeScript","C","SQL"],
-  },
-  {
-    icon: "⚙️", label: "Frameworks & Libraries",
-    color: "text-teal-700", bg: "bg-teal-50", border: "border-teal-100", dot: "bg-teal-500",
-    items: ["TensorFlow","PyTorch","Streamlit","MediaPipe","YOLOv8","React","FastAPI"],
-  },
-  {
-    icon: "🛠️", label: "Tools & Platforms",
-    color: "text-slate-700", bg: "bg-slate-50", border: "border-slate-200", dot: "bg-slate-500",
-    items: ["Git & GitHub","Jupyter Notebook","VS Code","Google Colab","OpenCV","Docker"],
-  },
-];
-
-const Skills = () => (
-  <section id="skills" className="py-20 px-4" style={{ background: "#f8f7ff" }}>
-    <div className="max-w-5xl mx-auto">
-      <SectionHeader title="Skills" sub="Technical Expertise" />
-      <div className="grid sm:grid-cols-2 gap-5">
-        {skillGroups.map(({ icon, label, color, bg, border, dot, items }) => (
-          <div key={label} className={`${bg} rounded-2xl p-6 border ${border} hover:shadow-md transition-shadow`}>
-            <div className="flex items-center gap-2 mb-4">
-              <span className="text-xl">{icon}</span>
-              <h3 className={`text-sm font-extrabold uppercase tracking-wider ${color}`}>{label}</h3>
-            </div>
-            <div className="flex flex-wrap gap-2">
-              {items.map((skill) => (
-                <span key={skill}
-                  className="inline-flex items-center gap-1.5 text-sm bg-white border border-white/80 text-slate-700 px-3 py-1.5 rounded-full font-medium shadow-sm hover:shadow transition-shadow">
-                  <span className={`w-1.5 h-1.5 rounded-full flex-shrink-0 ${dot}`} />
-                  {skill}
-                </span>
-              ))}
-            </div>
+      <SectionHeader title="Certifications" sub="Verified" />
+      <div className="space-y-4">
+        {[
+          { title: "Google Data Analytics", org: "Coursera", cert: "https://github.com/jayasri21072006/pro/blob/main/Google%20Data%20analytics%20professional%20certificate.pdf", icon: "📊" },
+          { title: "Machine Learning", org: "Coursera & AWS", cert: "https://github.com/jayasri21072006/pro/blob/main/ML%20certification%20-Coursera%2CAWS.pdf", icon: "🧠" },
+          { title: "Data Science & Gen AI", org: "PW Skills & IBM", cert: "https://github.com/jayasri21072006/pro/blob/main/pw%20skills%20DS%20with%20GenAI.pdf", icon: "🚀" }
+        ].map((c, idx) => (
+          <div key={idx} className="bg-slate-50 rounded-xl p-5 border border-slate-100 flex items-center gap-4">
+            <div className="w-10 h-10 rounded-lg bg-white flex items-center justify-center shadow-sm">{c.icon}</div>
+            <div className="flex-1"><h4 className="text-sm font-black text-slate-900">{c.title}</h4><p className="text-[10px] text-violet-600 font-bold">{c.org}</p></div>
+            <a href={c.cert} target="_blank" rel="noopener noreferrer" className="px-3 py-1 bg-white border border-slate-200 text-slate-600 text-[10px] font-bold rounded hover:bg-slate-100">VIEW →</a>
           </div>
         ))}
       </div>
@@ -412,61 +222,46 @@ const Skills = () => (
   </section>
 );
 
-/* ══════════════ CONTACT ══════════════ */
-const Contact = () => (
-  <section id="contact" className="py-20 px-4 text-white text-center"
-    style={{ background: "linear-gradient(135deg,#7c3aed 0%,#4f46e5 60%,#2563eb 100%)" }}>
-    <div className="max-w-xl mx-auto">
-      <div className="text-5xl mb-4">👋</div>
-      <h2 className="text-3xl font-black mb-3">Get In Touch</h2>
-      <p className="text-indigo-200 mb-8 text-base leading-relaxed">
-        Open to internships, collaborations, and exciting AI/ML opportunities.
-      </p>
-      <div className="flex flex-wrap justify-center gap-3">
-        <a href="mailto:jayasri@example.com"
-          className="px-6 py-2.5 bg-white text-violet-700 rounded-full font-bold text-sm hover:bg-violet-50 transition-colors shadow-lg">
-          ✉️ Email Me
-        </a>
-        <a href="https://github.com/jayasri21072006" target="_blank" rel="noopener noreferrer"
-          className="px-6 py-2.5 border-2 border-white/30 text-white rounded-full font-bold text-sm hover:bg-white/10 transition-colors">
-          {GH_ICON} <span className="ml-1">GitHub</span>
-        </a>
+const Skills = () => (
+  <section id="skills" className="py-20 bg-white px-4">
+    <div className="max-w-5xl mx-auto text-center">
+      <SectionHeader title="Skills" sub="Tools" />
+      <div className="flex flex-wrap justify-center gap-3 max-w-3xl mx-auto">
+        {["Python", "SQL", "Java", "JS", "TS", "ML", "DL", "GenAI", "NLP", "CV", "React", "Docker", "Git"].map(s => (
+          <span key={s} className="px-6 py-2 bg-violet-50 text-violet-700 rounded-full font-black text-xs shadow-sm">{s}</span>
+        ))}
       </div>
     </div>
   </section>
 );
 
-/* ══════════════ FOOTER ══════════════ */
+const Contact = () => (
+  <section id="contact" className="py-20 px-4 text-white text-center" style={{ background: "linear-gradient(135deg,#7c3aed 0%,#4f46e5 100%)" }}>
+    <h2 className="text-4xl font-black mb-10">Get In Touch</h2>
+    <div className="flex justify-center gap-4">
+      <a href="mailto:jayasri21072006@gmail.com" className="px-10 py-3 bg-white text-violet-700 rounded-full font-black text-sm shadow-xl">✉️ Email Me</a>
+      <a href="https://github.com/jayasri21072006" target="_blank" rel="noopener noreferrer" className="px-10 py-3 border-2 border-white/30 text-white rounded-full font-black text-sm">GitHub</a>
+    </div>
+  </section>
+);
+
 const Footer = () => (
-  <footer className="bg-slate-950 text-slate-500 text-center py-5 text-xs font-medium">
-    © {new Date().getFullYear()} Jayasri T · Built with React &amp; Tailwind CSS
+  <footer className="bg-slate-950 text-slate-600 text-center py-6 text-[10px] font-black uppercase tracking-widest">
+    © {new Date().getFullYear()} Jayasri T · AI & ML Engineer
   </footer>
 );
 
-/* ══════════════ HOME ══════════════ */
-const Home = () => (
-  <div className="font-sans antialiased">
-    <NavBar />
-    <Hero />
-    <Education />
-    <Experience />
-    <Projects />
-    <Achievements />
-    <Certifications />
-    <Skills />
-    <Contact />
-    <Footer />
-  </div>
-);
-
-/* ══════════════ APP ══════════════ */
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
-      <Toaster />
       <BrowserRouter basename="/aspiring-ai-engineer-portfolio">
+        <Toaster />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={
+            <div className="font-sans antialiased text-slate-900">
+              <NavBar /><Hero /><Education /><Experience /><Projects /><Achievements /><Certifications /><Skills /><Contact /><Footer />
+            </div>
+          } />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>

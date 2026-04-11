@@ -2,6 +2,12 @@ import { GraduationCap, Award, ExternalLink, ChevronRight } from "lucide-react";
 
 const courses = [
   {
+    name: "Gen AI-Powered Job Simulation",
+    platform: "Tata iQ & Forage",
+    summary: "Completed a Gen AI job simulation covering real-world AI applications, prompt design, and intelligent workflow automation.",
+    links: [{ label: "View Certificate", url: "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/ifobHAoMjQs9s6bKS/gMTdCXwDdLYoXZ3wG_ifobHAoMjQs9s6bKS_jk9FrdQPddzYXuNSH_1753200293130_completion_certificate.pdf" }]
+  },
+  {
     name: "Google Data Analytics",
     platform: "Coursera",
     summary: "Completed an end-to-end data analysis program covering data cleaning, visualization, and reporting using spreadsheets and SQL.",
@@ -58,7 +64,17 @@ const EducationSection = () => {
             <h3 className="font-display text-xl font-bold">Education</h3>
           </div>
           
-          <div className="space-y-4">
+          <div className="space-y-8">
+            <div>
+              <h4 className="font-semibold text-lg">B.E – Artificial Intelligence & Machine Learning</h4>
+              <p className="text-primary">Sri Manakula Vinayagar Engineering College, Puducherry</p>
+              <p className="text-muted-foreground text-sm mt-1">2022 – 2026 (Ongoing)</p>
+              <div className="mt-3 inline-flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full">
+                <span className="text-primary font-bold">CGPA: 9.35/10</span>
+                <span className="text-muted-foreground text-sm">(up to 5th semester)</span>
+              </div>
+            </div>
+
             <div>
               <h4 className="font-semibold text-lg">B.Tech - Artificial Intelligence & Data Science</h4>
               <p className="text-primary">Anand Institute of Higher Technology, Chennai</p>

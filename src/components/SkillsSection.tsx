@@ -1,18 +1,10 @@
 const skills = [
-  "Python",
-  "SQL",
-  "Java",
-  "Machine Learning",
-  "Deep Learning",
-  "Generative AI",
-  "Scikit-learn",
-  "CNN",
-  "Data Analysis",
-  "Flask API",
-  "MongoDB",
-  "Vector DB",
-  "Git",
-  "Problem Solving"
+  "Python", "SQL", "Java", "JavaScript", "TypeScript", "C",
+  "Machine Learning", "Deep Learning", "Generative AI", "NLP", "Computer Vision",
+  "Scikit-learn", "TensorFlow", "PyTorch", "MediaPipe", "YOLOv8",
+  "RAG Pipeline", "Model Quantisation", "CNN", "Data Analysis",
+  "Flask API", "FastAPI", "React", "Streamlit",
+  "MongoDB", "Vector DB", "Git & GitHub", "Docker", "Problem Solving"
 ];
 
 const SkillsSection = () => {
