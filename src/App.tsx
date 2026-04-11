@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Toaster } from "./components/ui/sonner.tsx";
 import { TooltipProvider } from "./components/ui/tooltip.tsx";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
@@ -44,11 +45,13 @@ const NavBar = () => (
 const Hero = () => (
   <section id="about" className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-4 text-center pt-20"
     style={{ background: "linear-gradient(135deg, #f5f3ff 0%, #eef2ff 50%, #f0f9ff 100%)" }}>
+    {/* Decorative blobs */}
     <div className="absolute top-20 left-10 w-72 h-72 rounded-full opacity-20 blur-3xl"
       style={{ background: "radial-gradient(circle, #8b5cf6, transparent)" }} />
     <div className="absolute bottom-20 right-10 w-64 h-64 rounded-full opacity-15 blur-3xl"
       style={{ background: "radial-gradient(circle, #6366f1, transparent)" }} />
 
+    {/* Avatar */}
     <div className="relative mb-6">
       <div className="w-32 h-32 rounded-full flex items-center justify-center text-white text-4xl font-black shadow-2xl ring-4 ring-white ring-offset-4 ring-offset-violet-100"
         style={{ background: "linear-gradient(135deg, #7c3aed, #4f46e5)" }}>
@@ -70,10 +73,18 @@ const Hero = () => (
     </p>
 
     <div className="flex gap-3 flex-wrap justify-center mb-14">
-      <a href="#projects" className="px-6 py-2.5 rounded-full text-sm font-bold text-white shadow-lg hover:shadow-violet-200 hover:-translate-y-0.5 transition-all" style={{ background: "linear-gradient(135deg,#7c3aed,#4f46e5)" }}>View Projects</a>
-      <a href="#contact" className="px-6 py-2.5 rounded-full text-sm font-bold text-violet-700 border-2 border-violet-200 hover:border-violet-400 hover:bg-violet-50 transition-all">Contact Me</a>
+      <a href="#projects"
+        className="px-6 py-2.5 rounded-full text-sm font-bold text-white shadow-lg hover:shadow-violet-200 hover:-translate-y-0.5 transition-all"
+        style={{ background: "linear-gradient(135deg,#7c3aed,#4f46e5)" }}>
+        View Projects
+      </a>
+      <a href="#contact"
+        className="px-6 py-2.5 rounded-full text-sm font-bold text-violet-700 border-2 border-violet-200 hover:border-violet-400 hover:bg-violet-50 transition-all">
+        Contact Me
+      </a>
     </div>
 
+    {/* Stats */}
     <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 w-full max-w-xl">
       {[
         { label: "CGPA", value: "9.40", icon: "🎯" },
@@ -96,29 +107,29 @@ const Education = () => (
   <section id="education" className="py-20 bg-white px-4">
     <div className="max-w-3xl mx-auto">
       <SectionHeader title="Education" sub="Academic Background" />
-      <div className="relative pl-8 border-l-2 border-indigo-100">
-        <div className="absolute -left-2.5 top-0 w-5 h-5 rounded-full bg-indigo-600 border-2 border-white shadow" />
-        <div className="bg-gradient-to-br from-indigo-50 to-blue-50 rounded-2xl p-8 border border-indigo-100 shadow-sm">
+      <div className="relative pl-8 border-l-2 border-violet-100">
+        <div className="absolute -left-2.5 top-0 w-5 h-5 rounded-full bg-violet-600 border-2 border-white shadow" />
+        <div className="bg-gradient-to-br from-violet-50 to-indigo-50 rounded-2xl p-8 border border-violet-100 shadow-sm">
           <div className="flex items-start gap-5">
             <div className="w-14 h-14 rounded-2xl flex items-center justify-center text-2xl shadow flex-shrink-0"
-              style={{ background: "linear-gradient(135deg,#4f46e5,#2563eb)" }}>
+              style={{ background: "linear-gradient(135deg,#7c3aed,#4f46e5)" }}>
               🎓
             </div>
             <div className="flex-1 min-w-0">
               <div className="flex items-start justify-between flex-wrap gap-2 mb-1">
-                <h3 className="text-lg font-extrabold text-slate-900">B.Tech - Artificial Intelligence &amp; Data Science</h3>
+                <h3 className="text-lg font-extrabold text-slate-900">B.Tech – Artificial Intelligence &amp; Data Science</h3>
                 <span className="text-xs bg-emerald-100 text-emerald-700 font-bold px-3 py-1 rounded-full flex-shrink-0">● Pursuing</span>
               </div>
-              <p className="text-indigo-600 font-semibold text-sm mb-5">
+              <p className="text-violet-600 font-semibold text-sm mb-5">
                 Anand Institute of Higher Technology, Chennai
               </p>
               <div className="flex flex-wrap gap-3">
-                <div className="bg-white rounded-xl px-5 py-3 shadow-sm border border-indigo-100 text-center">
-                  <p className="text-2xl font-black text-indigo-700">9.40</p>
+                <div className="bg-white rounded-xl px-5 py-3 shadow-sm border border-violet-100 text-center">
+                  <p className="text-2xl font-black text-violet-700">9.40</p>
                   <p className="text-xs text-slate-500 mt-0.5 font-medium">CGPA · Up to 4th Sem</p>
                 </div>
-                <div className="bg-white rounded-xl px-5 py-3 shadow-sm border border-blue-100 text-center">
-                  <p className="text-2xl font-black text-blue-600">2023–27</p>
+                <div className="bg-white rounded-xl px-5 py-3 shadow-sm border border-indigo-100 text-center">
+                  <p className="text-2xl font-black text-indigo-600">2023–27</p>
                   <p className="text-xs text-slate-500 mt-0.5 font-medium">Batch</p>
                 </div>
               </div>
@@ -135,70 +146,72 @@ const Experience = () => (
   <section id="experience" className="py-20 px-4" style={{ background: "#f8f7ff" }}>
     <div className="max-w-3xl mx-auto">
       <SectionHeader title="Experience" sub="Internships & Training" />
-      <div className="relative border-l-2 border-violet-200 pl-8 ml-2 space-y-8">
+      <div className="relative border-l-2 border-violet-200 pl-8 ml-2 space-y-12">
         {[
           {
-            role: "Node.js Intern",
-            company: "Askan Technologies",
-            period: "Dec 2025",
+            title: "Node.js Intern",
+            comp: "Askan Technologies",
+            time: "Dec 2025",
             desc: "Built RESTful APIs, implemented authentication, integrated third-party services, and improved backend reliability.",
             tags: ["Node.js", "Express", "API", "Auth"],
             cert: "https://github.com/jayasri21072006/pro/blob/main/Askan%20Node.js%20intern.pdf",
             icon: "🚀"
           },
           {
-            role: "ML Intern",
-            company: "Saiket Systems",
-            period: "Jun 2025 - Jul 2025",
+            title: "ML Intern",
+            comp: "Saiket Systems",
+            time: "Jun 2025 - Jul 2025",
             desc: "Developed ML pipelines: data cleaning, feature engineering, model training and evaluation; collaborated on monitoring.",
             tags: ["Machine Learning", "Python", "Pipelines"],
             cert: "https://github.com/jayasri21072006/pro/blob/main/saiket%20Ml%20intern.pdf",
             icon: "🧠"
           },
           {
-            role: "Python Intern",
-            company: "Cognifyz Technologies",
-            period: "Feb 2025 - Mar 2025",
+            title: "Python Intern",
+            comp: "Cognifyz Technologies",
+            time: "Feb 2025 - Mar 2025",
             desc: "Automated ETL workflows, created reusable Python modules, and implemented tests to ensure code quality.",
             tags: ["Python", "ETL", "Automation"],
             cert: "https://github.com/jayasri21072006/pro/blob/main/cognifyz%20python%20Intern.pdf",
             icon: "🐍"
           },
           {
-            role: "Gen AI Simulation",
-            company: "Tata iQ · Virtual via Forage",
-            period: "Completed",
-            desc: "Focused on real-world Gen AI applications, prompting, and practical deployment in professional contexts.",
-            tags: ["Gen AI", "Prompt Engineering", "Workflows"],
+            title: "Gen AI-Powered Job Simulation",
+            comp: "Tata iQ · Virtual via Forage",
+            time: "Completed",
+            desc: "Completed a virtual internship simulation focused on real-world applications of Generative AI, prompt engineering, and AI-powered workflows.",
+            tags: ["Generative AI", "Prompt Engineering", "AI Workflows"],
             cert: CERT_URL,
             icon: "🤖"
           }
-        ].map((exp, idx) => (
+        ].map((e, idx) => (
           <div key={idx} className="relative">
             <div className="absolute -left-[41px] top-0 w-4 h-4 rounded-full bg-violet-600 border-2 border-white shadow" />
             <div className="bg-white rounded-2xl p-7 shadow border border-slate-100 hover:shadow-md transition-shadow">
               <div className="flex items-start justify-between flex-wrap gap-3 mb-4">
                 <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-xl flex items-center justify-center text-white font-black text-xl shadow flex-shrink-0"
+                  <div className="w-12 h-12 rounded-xl flex items-center justify-center text-white font-black text-sm shadow flex-shrink-0"
                     style={{ background: "linear-gradient(135deg,#7c3aed,#4f46e5)" }}>
-                    {exp.icon}
+                    {e.icon}
                   </div>
                   <div>
-                    <h3 className="text-lg font-extrabold text-slate-900">{exp.role}</h3>
-                    <p className="text-violet-600 font-semibold text-sm">{exp.company}</p>
+                    <h3 className="text-lg font-extrabold text-slate-900">{e.title}</h3>
+                    <p className="text-violet-600 font-semibold text-sm">{e.comp}</p>
                   </div>
                 </div>
-                <span className="text-xs bg-violet-100 text-violet-700 font-bold px-3 py-1 rounded-full">{exp.period}</span>
+                <span className="text-xs bg-violet-100 text-violet-700 font-bold px-3 py-1 rounded-full">{e.time}</span>
               </div>
-              <p className="text-slate-600 text-sm leading-relaxed mb-4">{exp.desc}</p>
-              <div className="flex flex-wrap gap-1.5 mb-5">
-                {exp.tags.map((tag) => (
-                  <span key={tag} className="text-[10px] uppercase tracking-wider bg-slate-50 text-slate-500 border border-slate-200 px-2 py-0.5 rounded font-bold">{tag}</span>
+              <p className="text-slate-600 text-sm leading-relaxed mb-4">{e.desc}</p>
+              <div className="flex flex-wrap gap-2 mb-5">
+                {e.tags.map((tag) => (
+                  <span key={tag} className="text-xs bg-violet-50 text-violet-700 border border-violet-200 px-2.5 py-1 rounded-full font-semibold">{tag}</span>
                 ))}
               </div>
-              <a href={exp.cert} target="_blank" rel="noopener noreferrer"
+              <a href={e.cert} target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-sm font-bold text-violet-700 hover:text-violet-900 transition-colors group">
-                📄 View Certificate <span className="group-hover:translate-x-1 transition-transform">→</span>
+                <span className="w-7 h-7 rounded-full bg-violet-100 group-hover:bg-violet-200 flex items-center justify-center transition-colors">📄</span>
+                View Certificate
+                <span className="group-hover:translate-x-1 transition-transform text-violet-400">→</span>
               </a>
             </div>
           </div>
@@ -209,17 +222,27 @@ const Experience = () => (
 );
 
 /* ══════════════ PROJECTS ══════════════ */
-const projects = [
+type Project = {
+  emoji: string; accentFrom: string; accentTo: string;
+  badge?: string; badgeCls: string;
+  title: string; subtitle: string; description: string;
+  tags: string[]; githubUrl: string; liveUrl?: string;
+};
+
+const projects: Project[] = [
   {
     emoji: "🎓", accentFrom: "#7c3aed", accentTo: "#4f46e5",
+    badgeCls: "bg-violet-100 text-violet-700",
     title: "Examination Monitoring System",
     subtitle: "AI-powered real-time exam proctoring",
-    description: "Real-time exam proctoring system using YOLOv8, MediaPipe and OpenCV. Monitors multiple live camera feeds, detects suspicious behaviours (mobile phone use, copying, head-turning, group discussion), logs incidents automatically.",
+    description:
+      "Real-time exam proctoring system using YOLOv8, MediaPipe and OpenCV. Monitors multiple live camera feeds, detects suspicious behaviours, logs incidents and raises alerts.",
     tags: ["Python","Streamlit","YOLOv8","MediaPipe","OpenCV","Computer Vision"],
     githubUrl: "https://github.com/jayasri21072006/examination-monitoring-system",
   },
   {
     emoji: "🚀", accentFrom: "#2563eb", accentTo: "#0d9488",
+    badgeCls: "bg-blue-100 text-blue-700",
     title: "Crypto Liquidity Predictor",
     subtitle: "ML Market Prediction Tool",
     description: "End-to-end ML project predicting crypto trends using RandomForest. Features automated EDA, feature engineering, and a Streamlit UI for market analytics.",
@@ -230,16 +253,18 @@ const projects = [
   {
     emoji: "💬", accentFrom: "#0d9488", accentTo: "#0891b2",
     badge: "🏆 SIH 2025 · Selected",
-    title: "Sentiment Analysis Web App",
-    subtitle: "NLP selected for Smart India Hackathon 2025",
-    description: "AI-powered web app that analyses large volumes of stakeholder comments. Classifies sentiment, generates summaries, and visualises themes via an interactive word cloud.",
+    badgeCls: "bg-amber-100 text-amber-700",
+    title: "Sentiment Analysis with Word Cloud",
+    subtitle: "NLP web app selected at Smart India Hackathon 2025",
+    description:
+      "AI-powered web app that analyses stakeholders comments. Classifies sentiment, generates summaries, and visualises themes via an interactive word cloud.",
     tags: ["Python","Streamlit","NLP","WordCloud","Pandas","Matplotlib"],
     githubUrl: "https://github.com/jayasri21072006/sentiment_analysis_with_wordcloud",
     liveUrl: "https://sentimentanalysiswithwordcloud.streamlit.app/",
   },
 ];
 
-const ProjectCard = ({ p }: { p: any }) => (
+const ProjectCard = ({ p }: { p: Project }) => (
   <div className="bg-white rounded-2xl border border-slate-100 shadow hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col overflow-hidden">
     <div className="h-1.5 w-full" style={{ background: `linear-gradient(90deg,${p.accentFrom},${p.accentTo})` }} />
     <div className="p-7 flex flex-col flex-1">
@@ -255,13 +280,13 @@ const ProjectCard = ({ p }: { p: any }) => (
           </div>
         </div>
         {p.badge && (
-          <span className="text-[10px] bg-amber-100 text-amber-700 font-bold px-2.5 py-1 rounded-full flex-shrink-0">{p.badge}</span>
+          <span className={`text-[10px] font-bold px-2.5 py-1 rounded-full flex-shrink-0 ${p.badgeCls}`}>{p.badge}</span>
         )}
       </div>
       <p className="text-slate-600 text-sm leading-relaxed mb-5 flex-1">{p.description}</p>
       <div className="flex flex-wrap gap-1.5 mb-5">
         {p.tags.map((t) => (
-          <span key={t} className="text-[10px] bg-slate-50 border border-slate-200 text-slate-500 px-2 py-0.5 rounded font-bold uppercase tracking-wider">{t}</span>
+          <span key={t} className="text-xs bg-slate-50 border border-slate-200 text-slate-600 px-2.5 py-1 rounded-full font-medium">{t}</span>
         ))}
       </div>
       <div className="flex gap-2 flex-wrap">
@@ -284,9 +309,9 @@ const ProjectCard = ({ p }: { p: any }) => (
 const Projects = () => (
   <section id="projects" className="py-20 bg-white px-4">
     <div className="max-w-5xl mx-auto">
-      <SectionHeader title="Projects" sub="Featured AI Solutions" />
+      <SectionHeader title="Projects" sub="Things I've Built" />
       <div className="grid md:grid-cols-3 gap-6">
-        {projects.map((p, idx) => <ProjectCard key={idx} p={p} />)}
+        {projects.map((p) => <ProjectCard key={p.title} p={p} />)}
       </div>
     </div>
   </section>
@@ -301,7 +326,7 @@ const achievements = [
     border: "border-yellow-200",
     title: "Flipkart Grid 7.0",
     subtitle: "Qualified Round 2",
-    detail: "Cleared Round 2 of Flipkart Grid 7.0 — India's competitive engineering challenge, testing software engineering and system design skills.",
+    detail: "Cleared Round 2 of Flipkart's engineering challenge.",
     tags: ["Competitive Programming","Software Engineering","System Design"],
   },
   {
@@ -309,19 +334,19 @@ const achievements = [
     color: "from-orange-500 to-red-500",
     bg: "from-orange-50 to-red-50",
     border: "border-orange-200",
-    title: "LeetCode 200+ Solved",
-    subtitle: "Data Structures & Algorithms · Java",
-    detail: "Solved 200+ DSA problems in Java, covering Arrays, Linked Lists, Trees, Graphs, and Dynamic Programming.",
-    tags: ["Java","DSA","Dynamic Programming","Sliding Window"],
+    title: "LeetCode 200+",
+    subtitle: "Java DSA Specialist",
+    detail: "Solved 200+ DSA problems in Java.",
+    tags: ["Java","Arrays & Strings","Trees & Graphs","Dynamic Programming"],
   },
   {
     icon: "🏆",
     color: "from-violet-500 to-indigo-600",
     bg: "from-violet-50 to-indigo-50",
     border: "border-violet-200",
-    title: "Smart India Hackathon 2025",
-    subtitle: "Selected — College Level Round",
-    detail: "Sentiment Analysis project selected at the SIH 2025 internal round, competing against teams department-wide.",
+    title: "SIH 2025 Selected",
+    subtitle: "Internal Round",
+    detail: "Sentiment Analysis project selected for SIH 2025.",
     tags: ["AI/ML","NLP","Hackathon","Team Project"],
   },
 ];
@@ -331,8 +356,8 @@ const Achievements = () => (
     <div className="max-w-5xl mx-auto">
       <SectionHeader title="Achievements" sub="Milestones & Recognitions" />
       <div className="grid md:grid-cols-3 gap-6">
-        {achievements.map((a, idx) => (
-          <div key={idx} className={`bg-gradient-to-br ${a.bg} rounded-2xl border ${a.border} p-7 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 flex flex-col`}>
+        {achievements.map((a) => (
+          <div key={a.title} className={`bg-gradient-to-br ${a.bg} rounded-2xl border ${a.border} p-7 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 flex flex-col`}>
             <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${a.color} flex items-center justify-center text-2xl shadow-md mb-4 flex-shrink-0`}>
               {a.icon}
             </div>
@@ -341,7 +366,7 @@ const Achievements = () => (
             <p className="text-slate-600 text-sm leading-relaxed mb-4 flex-1">{a.detail}</p>
             <div className="flex flex-wrap gap-1.5">
               {a.tags.map((t) => (
-                <span key={t} className="text-[10px] bg-white/70 border border-white text-slate-600 px-2.5 py-0.5 rounded-full font-bold uppercase tracking-wider">{t}</span>
+                <span key={t} className="text-xs bg-white/70 border border-white text-slate-600 px-2.5 py-0.5 rounded-full font-medium">{t}</span>
               ))}
             </div>
           </div>
@@ -358,19 +383,26 @@ const Certifications = () => (
       <SectionHeader title="Certifications" sub="Verified Achievements" />
       <div className="space-y-6">
         {[
-          { title: "Gen AI Job Simulation", org: "Tata iQ & Forage", cert: CERT_URL, icon: "🤖", detail: "Real-world AI apps, prompt design, and workflow automation." },
-          { title: "Google Data Analytics", org: "Coursera", cert: "https://github.com/jayasri21072006/pro/blob/main/Google%20Data%20analytics%20professional%20certificate.pdf", icon: "📊", detail: "Professional certificate for data analysis and visualization." },
-          { title: "Machine Learning", org: "Coursera & AWS", cert: "https://github.com/jayasri21072006/pro/blob/main/ML%20certification%20-Coursera%2CAWS.pdf", icon: "🧠", detail: "Core ML concepts and model building techniques." },
-          { title: "Data Science & Gen AI", org: "PW Skills & IBM", cert: "https://github.com/jayasri21072006/pro/blob/main/pw%20skills%20DS%20with%20GenAI.pdf", icon: "🚀", detail: "Combined training for data science and generative AI." }
+          { title: "Gen AI Job Simulation", org: "Tata iQ & Forage", cert: CERT_URL, icon: "🤖" },
+          { title: "Google Data Analytics", org: "Coursera", cert: "https://github.com/jayasri21072006/pro/blob/main/Google%20Data%20analytics%20professional%20certificate.pdf", icon: "📊" },
+          { title: "Machine Learning", org: "Coursera & AWS", cert: "https://github.com/jayasri21072006/pro/blob/main/ML%20certification%20-Coursera%2CAWS.pdf", icon: "🧠" },
+          { title: "Data Science & Gen AI", org: "PW Skills & IBM", cert: "https://github.com/jayasri21072006/pro/blob/main/pw%20skills%20DS%20with%20GenAI.pdf", icon: "🚀" }
         ].map((c, idx) => (
-          <div key={idx} className="bg-gradient-to-br from-slate-50 to-white rounded-2xl p-6 border border-slate-100 shadow-sm flex items-start gap-5 hover:shadow-md transition-shadow">
-            <div className="w-14 h-14 rounded-xl flex items-center justify-center text-2xl shadow-sm bg-white flex-shrink-0">{c.icon}</div>
+          <div key={idx} className="bg-gradient-to-br from-blue-50 to-teal-50 rounded-2xl p-7 border border-blue-100 shadow hover:shadow-md transition-shadow flex items-start gap-5">
+            <div className="w-16 h-16 rounded-2xl flex items-center justify-center text-2xl shadow-md flex-shrink-0"
+              style={{ background: "linear-gradient(135deg,#2563eb,#0d9488)" }}>
+              {c.icon}
+            </div>
             <div className="flex-1">
-              <h3 className="text-base font-extrabold text-slate-900">{c.title}</h3>
-              <p className="text-violet-600 font-bold text-xs mb-2">{c.org}</p>
-              <p className="text-slate-500 text-sm mb-4">{c.detail}</p>
-              <a href={c.cert} target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-violet-700 hover:text-violet-900 flex items-center gap-1 group">
-                View Certificate <span className="group-hover:translate-x-1 transition-transform">→</span>
+              <div className="flex items-start justify-between gap-2 flex-wrap mb-1">
+                <h3 className="text-lg font-extrabold text-slate-900">{c.title}</h3>
+                <span className="text-xs bg-emerald-100 text-emerald-700 font-bold px-3 py-1 rounded-full">✓ Verified</span>
+              </div>
+              <p className="text-blue-600 font-bold text-sm mb-3">{c.org}</p>
+              <a href={c.cert} target="_blank" rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-2.5 text-white text-sm font-bold rounded-full shadow hover:opacity-90 transition-opacity"
+                style={{ background: "linear-gradient(135deg,#2563eb,#0d9488)" }}>
+                📄 View Certificate
               </a>
             </div>
           </div>
@@ -434,20 +466,20 @@ const Skills = () => (
 /* ══════════════ CONTACT ══════════════ */
 const Contact = () => (
   <section id="contact" className="py-20 px-4 text-white text-center"
-    style={{ background: "linear-gradient(135deg,#7c3aed 0%,#4f46e5 100%)" }}>
+    style={{ background: "linear-gradient(135deg,#7c3aed 0%,#4f46e5 60%,#2563eb 100%)" }}>
     <div className="max-w-xl mx-auto">
       <div className="text-5xl mb-4">👋</div>
       <h2 className="text-3xl font-black mb-3">Get In Touch</h2>
       <p className="text-indigo-200 mb-8 text-base leading-relaxed">
         Open to internships, collaborations, and exciting AI/ML opportunities.
       </p>
-      <div className="flex flex-wrap justify-center gap-4">
+      <div className="flex flex-wrap justify-center gap-3">
         <a href="mailto:jayasri21072006@gmail.com"
-          className="px-8 py-3 bg-white text-violet-700 rounded-full font-black text-sm hover:bg-violet-50 transition-all shadow-xl">
+          className="px-6 py-2.5 bg-white text-violet-700 rounded-full font-bold text-sm hover:bg-violet-50 transition-colors shadow-lg">
           ✉️ Email Me
         </a>
         <a href="https://github.com/jayasri21072006" target="_blank" rel="noopener noreferrer"
-          className="px-8 py-3 border-2 border-white/30 text-white rounded-full font-black text-sm hover:bg-white/10 transition-all">
+          className="px-6 py-2.5 border-2 border-white/30 text-white rounded-full font-bold text-sm hover:bg-white/10 transition-colors">
           {GH_ICON} <span className="ml-1">GitHub</span>
         </a>
       </div>
@@ -455,23 +487,37 @@ const Contact = () => (
   </section>
 );
 
+/* ══════════════ FOOTER ══════════════ */
 const Footer = () => (
-  <footer className="bg-slate-950 text-slate-600 text-center py-8 text-[10px] font-black uppercase tracking-widest">
-    © {new Date().getFullYear()} Jayasri T · AI &amp; ML Engineer Portfolio
+  <footer className="bg-slate-950 text-slate-500 text-center py-5 text-xs font-medium">
+    © {new Date().getFullYear()} Jayasri T · AI &amp; ML Engineer
   </footer>
 );
 
+/* ══════════════ HOME ══════════════ */
+const Home = () => (
+  <div className="font-sans antialiased">
+    <NavBar />
+    <Hero />
+    <Education />
+    <Experience />
+    <Projects />
+    <Achievements />
+    <Certifications />
+    <Skills />
+    <Contact />
+    <Footer />
+  </div>
+);
+
+/* ══════════════ APP ══════════════ */
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <BrowserRouter basename="/aspiring-ai-engineer-portfolio">
         <Routes>
-          <Route path="/" element={
-            <div className="font-sans antialiased text-slate-900 selection:bg-violet-100">
-              <NavBar /><Hero /><Education /><Experience /><Projects /><Achievements /><Certifications /><Skills /><Contact /><Footer />
-            </div>
-          } />
+          <Route path="/" element={<Home />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
