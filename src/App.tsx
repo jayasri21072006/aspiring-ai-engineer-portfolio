@@ -24,7 +24,7 @@ const SectionHeader = ({ title, sub }: { title: string; sub: string }) => (
 );
 
 const NavBar = () => (
-  <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-xl border-b border-white/5 px-6 py-4 flex items-center justify-between shadow-2xl">
+  <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-xl border-b border-white/5 px-6 py-4 flex items-center justify-between shadow-sm">
     <span className="font-black text-white text-2xl tracking-tighter">
       Jayasri<span className="text-violet-500"> T</span>
     </span>
@@ -61,8 +61,8 @@ const Hero = () => (
         AI &amp; ML Engineer
       </p>
       <p className="max-w-2xl text-slate-400 text-lg leading-relaxed mb-10">
-        Building the future with intelligent systems. Specialize in Generative AI and scalable ML architectures.
-        Currently pursuing B.Tech in AI &amp; DS with a CGPA of{" "}
+        Passionate about building intelligent systems, exploring Generative AI, and solving hard problems.
+        Pursuing B.Tech in AI &amp; DS with a CGPA of{" "}
         <span className="font-extrabold text-violet-400 border-b-2 border-violet-500/30">9.35</span> (up to 5th Semester).
       </p>
 
@@ -91,7 +91,7 @@ const Hero = () => (
 
 const Education = () => (
   <section id="education" className="py-32 bg-slate-950 px-4">
-    <div className="max-w-4xl mx-auto">
+    <div className="max-w-4xl mx-auto text-left">
       <SectionHeader title="Education" sub="Academic Timeline" />
       <div className="bg-white/5 backdrop-blur-md rounded-[2.5rem] p-10 border border-white/5 shadow-2xl relative overflow-hidden group">
         <div className="absolute top-0 right-0 w-64 h-64 bg-violet-600/5 rounded-full -mr-32 -mt-32 blur-[80px]" />
@@ -101,7 +101,7 @@ const Education = () => (
           <div className="flex-1 min-w-0 relative z-10">
             <div className="flex items-start justify-between flex-wrap gap-4 mb-4">
               <div>
-                <h3 className="text-2xl font-black text-white mb-1">B.Tech - Artificial Intelligence &amp; Data Science</h3>
+                <h3 className="text-2xl font-black text-white mb-1 leading-tight">B.Tech - Artificial Intelligence &amp; Data Science</h3>
                 <p className="text-violet-400 font-bold text-lg">Anand Institute of Higher Technology, Chennai</p>
               </div>
               <span className="text-[10px] bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 font-black px-4 py-1.5 rounded-full tracking-widest h-fit">PURSUING</span>
@@ -109,11 +109,11 @@ const Education = () => (
             <div className="flex flex-wrap gap-4 mt-8">
               <div className="bg-slate-900 rounded-3xl px-8 py-5 border border-white/5">
                 <p className="text-3xl font-black text-white">9.35</p>
-                <p className="text-xs text-slate-500 mt-1 font-bold uppercase tracking-widest">CGPA · 5th SEM</p>
+                <p className="text-xs text-slate-500 mt-1 font-bold uppercase tracking-widest text-[10px]">CGPA · Up to 5th Sem</p>
               </div>
               <div className="bg-slate-900 rounded-3xl px-8 py-5 border border-white/5">
                 <p className="text-3xl font-black text-white">2023–27</p>
-                <p className="text-xs text-slate-500 mt-1 font-bold uppercase tracking-widest">BATCH</p>
+                <p className="text-xs text-slate-500 mt-1 font-bold uppercase tracking-widest text-[10px]">Batch</p>
               </div>
             </div>
           </div>
@@ -124,50 +124,53 @@ const Education = () => (
 );
 
 const Experience = () => (
-  <section id="experience" className="py-32 bg-slate-950 px-4 relative">
-    <div className="absolute inset-0 bg-violet-950/20 skew-y-3 -z-10" />
-    <div className="max-w-4xl mx-auto">
-      <SectionHeader title="Experience" sub="Industry Presence" />
+  <section id="experience" className="py-32 bg-slate-950 px-4">
+    <div className="max-w-4xl mx-auto text-left">
+      <SectionHeader title="Experience" sub="Professional Narrative" />
       <div className="space-y-12">
         {[
           {
             title: "Node.js Intern",
             comp: "Askan Technologies",
             time: "Dec 2025",
-            desc: "Engineered scalable backend architectures and robust RESTful APIs using Node.js and Express.",
-            tags: ["Node.js", "Express", "REST API"],
+            desc: "Built RESTful APIs, implemented authentication, integrated third-party services, and improved backend reliability.",
+            tags: ["Node.js", "Express", "API", "Auth"],
+            cert: "https://github.com/jayasri21072006/pro/blob/main/Askan%20Node.js%20intern.pdf",
             icon: "🚀"
           },
           {
             title: "ML Intern",
             comp: "Saiket Systems",
             time: "Jun 2025 - Jul 2025",
-            desc: "Deployment and monitoring of ML pipelines. Focused on model efficiency and data engineering tasks.",
-            tags: ["Python", "CI/CD", "Scikit"],
+            desc: "Developed ML pipelines: data cleaning, feature engineering, model training and evaluation; collaborated on monitoring.",
+            tags: ["Machine Learning", "Python", "Pipelines"],
+            cert: "https://github.com/jayasri21072006/pro/blob/main/saiket%20Ml%20intern.pdf",
             icon: "🧠"
           },
           {
             title: "Python Intern",
             comp: "Cognifyz Technologies",
             time: "Feb 2025 - Mar 2025",
-            desc: "Designed and implemented automated ETL scripts and data processing modules in Python.",
-            tags: ["Automation", "ETL", "Python"],
+            desc: "Automated ETL workflows, created reusable Python modules, and implemented tests to ensure code quality.",
+            tags: ["Python", "ETL", "Automation"],
+            cert: "https://github.com/jayasri21072006/pro/blob/main/cognifyz%20python%20Intern.pdf",
             icon: "🐍"
           },
           {
             title: "Tata Virtual Internship",
             comp: "Tata iQ · Virtual via Forage",
             time: "Completed",
-            desc: "Interactive simulation for Generative AI applications, prompt engineering, and intelligent workflow automation.",
-            tags: ["Gen AI", "Prompt Engineering"],
+            desc: "Completed a virtual internship simulation focused on real-world applications of Generative AI, prompt engineering, and AI-powered workflows.",
+            tags: ["Generative AI", "Prompt Engineering", "AI Workflows"],
+            cert: CERT_URL,
             icon: "🤖"
           }
         ].map((e, idx) => (
           <div key={idx} className="group relative pl-12 border-l-2 border-white/5">
-            <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-violet-600 ring-4 ring-slate-950 shadow-lg group-hover:scale-125 transition-transform" />
+            <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-violet-600 ring-4 ring-slate-950 group-hover:scale-125 transition-transform" />
             <div className="bg-white/5 backdrop-blur-sm rounded-[2rem] p-8 border border-white/5 hover:border-violet-500/30 transition-all shadow-xl">
               <div className="flex items-center gap-5 mb-6">
-                <div className="w-14 h-14 rounded-2xl flex items-center justify-center text-3xl bg-slate-900 shadow-inner">{e.icon}</div>
+                <div className="w-14 h-14 rounded-2xl flex items-center justify-center text-3xl bg-slate-900">{e.icon}</div>
                 <div>
                   <h3 className="text-xl font-black text-white">{e.title}</h3>
                   <p className="text-violet-400 font-bold text-sm tracking-tight">{e.comp}</p>
@@ -175,9 +178,10 @@ const Experience = () => (
                 <span className="ml-auto text-[10px] font-black text-slate-500 tracking-widest uppercase">{e.time}</span>
               </div>
               <p className="text-slate-400 text-sm leading-relaxed mb-6">{e.desc}</p>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-2 mb-6">
                 {e.tags.map(t => <span key={t} className="px-3 py-1 rounded-lg bg-white/5 border border-white/5 text-[10px] font-black text-slate-300 uppercase tracking-wider">{t}</span>)}
               </div>
+              <a href={e.cert} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-xs font-bold text-violet-400 hover:text-white transition-colors">📄 View Certificate →</a>
             </div>
           </div>
         ))}
@@ -188,22 +192,40 @@ const Experience = () => (
 
 const Projects = () => (
   <section id="projects" className="py-32 bg-slate-950 px-4">
-    <div className="max-w-6xl mx-auto">
-      <SectionHeader title="Projects" sub="Innovation Gallery" />
+    <div className="max-w-6xl mx-auto text-left">
+      <SectionHeader title="Projects" sub="Technical Gallery" />
       <div className="grid md:grid-cols-3 gap-8">
         {[
-          { emoji: "🎓", title: "AI Proctoring", tags: ["YOLOv8", "Computer Vision"], desc: "Real-time intelligent exam monitoring system with gesture detection.", git: "https://github.com/jayasri21072006/examination-monitoring-system" },
-          { emoji: "📈", title: "Crypto Predictor", tags: ["ML", "Market Analytics"], desc: "Market liquidity analysis using RandomForest and comprehensive EDA.", git: "https://github.com/jayasri21072006/crypto-liquidity-predictor" },
-          { emoji: "💬", title: "Sentiment Hub", tags: ["NLP", "SIH 2025"], desc: "Selected at SIH 2025 college round. Analyzes stakeholder feedback volume.", git: "https://github.com/jayasri21072006/sentiment_analysis_with_wordcloud" }
+          { 
+            emoji: "🎓", 
+            title: "Proctoring System", 
+            sub: "YOLOv8 & MediaPipe", 
+            desc: "Real-time exam proctoring system using YOLOv8, MediaPipe and OpenCV. Monitors multiple live camera feeds, detects suspicious behaviours (mobile phone use, copying, head-turning, group discussion), logs incidents automatically.",
+            git: "https://github.com/jayasri21072006/examination-monitoring-system" 
+          },
+          { 
+            emoji: "📈", 
+            title: "Crypto Predictor", 
+            sub: "Machine Learning", 
+            desc: "End-to-end ML project predicting crypto trends using RandomForest. Features automated EDA, feature engineering, and a Streamlit UI for market analytics.",
+            git: "https://github.com/jayasri21072006/crypto-liquidity-predictor" 
+          },
+          { 
+            emoji: "💬", 
+            title: "Sentiment Hub", 
+            sub: "NLP SIH 2025", 
+            desc: "AI-powered web app that analyses large volumes of stakeholder comments. Classifies sentiment, generates summaries, and visualises themes via an interactive word cloud.",
+            git: "https://github.com/jayasri21072006/sentiment_analysis_with_wordcloud" 
+          }
         ].map((p, idx) => (
-          <div key={idx} className="bg-white/5 border border-white/5 rounded-[2.5rem] p-8 hover:bg-white/[0.07] transition-all hover:-translate-y-2 group shadow-2xl flex flex-col h-full">
+          <div key={idx} className="bg-white/5 border border-white/5 rounded-[2.5rem] p-8 hover:bg-white/[0.07] transition-all group flex flex-col h-full">
             <div className="w-14 h-14 rounded-2xl bg-slate-900 flex items-center justify-center text-3xl mb-6 shadow-inner ring-1 ring-white/5 group-hover:ring-violet-500/50 transition-all">{p.emoji}</div>
             <h3 className="text-2xl font-black text-white mb-2">{p.title}</h3>
-            <div className="flex gap-2 mb-4">
-              {p.tags.map(t => <span key={t} className="text-[10px] font-black text-violet-500 uppercase tracking-widest">{t}</span>)}
-            </div>
+            <p className="text-[10px] font-black text-violet-500 uppercase tracking-widest mb-4">{p.sub}</p>
             <p className="text-slate-400 text-sm leading-relaxed mb-8 flex-grow">{p.desc}</p>
-            <a href={p.git} target="_blank" rel="noopener noreferrer" className="w-full py-3 bg-white text-slate-950 text-center rounded-2xl font-black text-xs hover:bg-violet-400 transition-colors">GITHUB REPO</a>
+            <div className="flex gap-2">
+              <a href={p.git} target="_blank" rel="noopener noreferrer" className="flex-1 py-3 bg-white text-slate-950 text-center rounded-2xl font-black text-xs hover:bg-violet-400 transition-colors">GITHUB</a>
+            </div>
           </div>
         ))}
       </div>
@@ -213,13 +235,13 @@ const Projects = () => (
 
 const Achievements = () => (
   <section id="achievements" className="py-32 bg-slate-950 px-4">
-    <div className="max-w-4xl mx-auto">
-      <SectionHeader title="Achievements" sub="Hall of Fame" />
+    <div className="max-w-6xl mx-auto">
+      <SectionHeader title="Achievements" sub="Milestones" />
       <div className="grid md:grid-cols-3 gap-6">
         {[
-          { icon: "🛍️", title: "Flipkart Grid 7.0", sub: "Selected for Round 2", detail: "Successfully selected for the second round of Flipkart's nationwide engineering challenge." },
-          { icon: "💻", title: "LeetCode 200+", sub: "DSA Expert", detail: "Solved 200+ advanced algorithmic problems focused on core structures." },
-          { icon: "🏆", title: "SIH 2025 Selected", sub: "College Level", detail: "Proposal selected to represent the college at the national level hackathon." }
+          { icon: "🛍️", title: "Flipkart Grid 7.0", sub: "Selected for Round 2", detail: "Successfully selected for Round 2 of Flipkart's national engineering challenge, clearing the highly competitive initial rounds." },
+          { icon: "💻", title: "LeetCode 200+", sub: "Java DSA Specialist", detail: "Solved 200+ DSA problems on LeetCode in Java, covering Arrays, Linked Lists, Trees, Graphs, Dynamic Programming, and more." },
+          { icon: "🏆", title: "SIH 2025 Selected", sub: "College Level Round", detail: "Sentiment Analysis project selected at the Internal SIH 2025 college round, competing with teams across departments." }
         ].map((a, idx) => (
           <div key={idx} className="bg-white/5 rounded-[2.5rem] p-8 border border-white/5 text-center hover:border-violet-500/30 transition-all group">
             <div className="text-4xl mb-6 transform group-hover:scale-110 transition-transform">{a.icon}</div>
@@ -234,23 +256,26 @@ const Achievements = () => (
 );
 
 const Certifications = () => (
-  <section id="certifications" className="py-32 bg-slate-950 px-4">
+  <section id="certifications" className="py-32 bg-slate-950 px-4 text-left">
     <div className="max-w-4xl mx-auto">
-      <SectionHeader title="Certifications" sub="Knowledge verified" />
+      <SectionHeader title="Certifications" sub="Verified Credentials" />
       <div className="grid sm:grid-cols-2 gap-6">
         {[
-          { title: "MongoDB Associate", org: "MongoDB University", icon: "🍃", url: "https://github.com/jayasri21072006/pro/blob/main/MongoDB.pdf" },
-          { title: "Google Data Analytics", org: "Coursera", icon: "📊", url: "https://github.com/jayasri21072006/pro/blob/main/Google%20Data%20analytics%20professional%20certificate.pdf" },
-          { title: "Machine Learning", org: "AWS", icon: "🧠", url: "https://github.com/jayasri21072006/pro/blob/main/ML%20certification%20-Coursera%2CAWS.pdf" },
-          { title: "Data Science", org: "IBM", icon: "🚀", url: "https://github.com/jayasri21072006/pro/blob/main/pw%20skills%20DS%20with%20GenAI.pdf" }
+          { title: "MongoDB Developer", org: "MongoDB University", icon: "🍃", url: "https://github.com/jayasri21072006/pro/blob/main/MongoDB.pdf", desc: "Proficiency in MongoDB indexing, aggregation pipelines, and data modeling for scalable applications." },
+          { title: "Google Data Analytics", org: "Coursera", icon: "📊", url: "https://github.com/jayasri21072006/pro/blob/main/Google%20Data%20analytics%20professional%20certificate.pdf", desc: "End-to-end data analysis program covering data cleaning, visualization, and reporting." },
+          { title: "Machine Learning", org: "AWS", icon: "🧠", url: "https://github.com/jayasri21072006/pro/blob/main/ML%20certification%20-Coursera%2CAWS.pdf", desc: "Core ML concepts and hands-on projects for practical model building." },
+          { title: "Data Science & Gen AI", org: "PW Skills & IBM", icon: "🚀", url: "https://github.com/jayasri21072006/pro/blob/main/pw%20skills%20DS%20with%20GenAI.pdf", desc: "Comprehensive training combined with hands-on generative AI techniques." }
         ].map((c, idx) => (
-          <div key={idx} className="flex items-center gap-4 bg-white/5 p-6 rounded-[1.5rem] border border-white/5 hover:bg-white/[0.08] transition-colors">
-            <div className="w-12 h-12 rounded-xl bg-slate-900 flex items-center justify-center text-2xl shadow-inner">{c.icon}</div>
-            <div className="flex-1 min-w-0">
-              <h4 className="text-white font-black text-sm truncate">{c.title}</h4>
-              <p className="text-violet-500 text-[10px] font-black uppercase tracking-widest">{c.org}</p>
+          <div key={idx} className="bg-white/5 p-8 rounded-[2rem] border border-white/5 hover:bg-white/[0.08] transition-colors h-full flex flex-col">
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-12 h-12 rounded-xl bg-slate-900 flex items-center justify-center text-2xl shadow-inner">{c.icon}</div>
+              <div>
+                <h4 className="text-white font-black text-sm">{c.title}</h4>
+                <p className="text-violet-500 text-[10px] font-black uppercase tracking-widest">{c.org}</p>
+              </div>
             </div>
-            <a href={c.url} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center text-white text-xs hover:bg-white hover:text-slate-950 transition-colors">↗</a>
+            <p className="text-slate-500 text-xs leading-relaxed mb-6 flex-grow">{c.desc}</p>
+            <a href={c.url} target="_blank" rel="noopener noreferrer" className="w-full py-3 border border-white/10 text-white rounded-xl text-center text-[10px] font-black hover:bg-white hover:text-slate-950 transition-all uppercase tracking-widest">View Certificate</a>
           </div>
         ))}
       </div>
@@ -261,18 +286,18 @@ const Certifications = () => (
 const Skills = () => (
   <section id="skills" className="py-32 bg-slate-950 px-4">
     <div className="max-w-5xl mx-auto">
-      <SectionHeader title="Skills" sub="Technical Arsenal" />
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <SectionHeader title="Skills" sub="Technical Expertise" />
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {[
-          { label: "AI/ML & GENAI", items: ["ML", "DL", "GenAI", "NLP", "CV"] },
-          { label: "LANGUAGES", items: ["Python", "Java", "JS", "TS", "SQL"] },
-          { label: "TECH STACK", items: ["TensorFlow", "React", "Docker", "FastAPI"] },
-          { label: "DATA TOOLS", items: ["MongoDB", "YOLOv8", "OpenCV", "Git"] },
+          { label: "AI / ML & GenAI", items: ["Machine Learning","Deep Learning","Generative AI","NLP","Computer Vision","RAG Pipeline"] },
+          { label: "Languages", items: ["Python","Java","JavaScript","TypeScript","C","SQL"] },
+          { label: "Frameworks", items: ["TensorFlow","PyTorch","Streamlit","React","FastAPI","YOLOv8"] },
+          { label: "Tools", items: ["Git & GitHub","Docker","OpenCV","MediaPipe","MongoDB","Google Colab"] },
         ].map(g => (
-          <div key={g.label} className="bg-white/5 p-6 rounded-[2rem] border border-white/5">
-            <h4 className="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-4">{g.label}</h4>
+          <div key={g.label} className="bg-white/5 p-8 rounded-[2.5rem] border border-white/5 text-left">
+            <h4 className="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-6">{g.label}</h4>
             <div className="flex flex-wrap gap-2">
-              {g.items.map(i => <span key={i} className="px-3 py-1 bg-violet-600/10 border border-violet-500/20 text-violet-400 font-bold text-[10px] rounded-lg">{i}</span>)}
+              {g.items.map(i => <span key={i} className="px-3 py-1.5 bg-violet-600/10 border border-violet-500/20 text-violet-400 font-bold text-[10px] rounded-xl">{i}</span>)}
             </div>
           </div>
         ))}
@@ -285,10 +310,10 @@ const Contact = () => (
   <section id="contact" className="py-32 px-4 bg-slate-950 text-center relative overflow-hidden">
     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-violet-600/10 rounded-full blur-[120px] -z-10" />
     <div className="max-w-2xl mx-auto relative z-10">
-      <h2 className="text-5xl font-black text-white mb-4 tracking-tighter">Let's Create.</h2>
+      <h2 className="text-6xl font-black text-white mb-6 tracking-tighter">Let's Connect.</h2>
       <p className="text-slate-400 text-lg mb-12">I am always looking for collaborative opportunities in AI/ML.</p>
       <div className="flex justify-center gap-6">
-        <a href="mailto:jayasri21072006@gmail.com" className="px-12 py-4 bg-white text-slate-950 rounded-[1.5rem] font-black tracking-tight hover:scale-105 transition-transform shadow-2xl shadow-white/10">Email Me</a>
+        <a href="mailto:jayasri21072006@gmail.com" className="px-12 py-4 bg-white text-slate-950 rounded-[1.5rem] font-black tracking-tight hover:scale-105 transition-transform shadow-2xl">Email Me</a>
         <a href="https://github.com/jayasri21072006" target="_blank" rel="noopener noreferrer" className="px-12 py-4 border border-white/20 text-white rounded-[1.5rem] font-black hover:bg-white/5 transition-colors tracking-tight">GitHub</a>
       </div>
     </div>
