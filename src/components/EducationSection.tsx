@@ -39,7 +39,7 @@ const courses = [
     name: "Python (Basic)",
     platform: "HackerRank",
     summary: "Demonstrated proficiency in core Python programming concepts and syntax.",
-    links: [{ label: "Verify Skill", url: "#" }]
+    links: [{ label: "View Certificate", url: "https://github.com/jayasri21072006/pro/blob/main/Python%20Certification.pdf" }]
   }
 ];
 
