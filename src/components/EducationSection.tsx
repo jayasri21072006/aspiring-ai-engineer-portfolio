@@ -3,12 +3,6 @@ import { ExternalLink, ChevronRight } from "lucide-react";
 
 const courses = [
   {
-    name: "Gen AI-Powered Job Simulation",
-    platform: "Tata iQ & Forage",
-    summary: "Completed a Gen AI job simulation covering real-world AI applications, prompt design, and intelligent workflow automation.",
-    links: [{ label: "View Certificate", url: "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/ifobHAoMjQs9s6bKS/gMTdCXwDdLYoXZ3wG_ifobHAoMjQs9s6bKS_jk9FrdQPddzYXuNSH_1753200293130_completion_certificate.pdf" }]
-  },
-  {
     name: "MongoDB Developer",
     platform: "MongoDB University",
     summary: "Proficiency in MongoDB indexing, aggregation pipelines, and data modeling for scalable applications.",
