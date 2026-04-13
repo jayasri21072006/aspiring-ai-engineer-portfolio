@@ -19,11 +19,12 @@ const ContactSection = () => {
                   <p className="text-white font-bold">jayasri21072006@gmail.com</p>
                 </div>
               </a>
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-xl bg-slate-900 flex items-center justify-center text-xl">📍</div>
+              <div className="flex items-center gap-4 group">
+                <div className="w-12 h-12 rounded-xl bg-slate-900 flex items-center justify-center text-xl group-hover:shadow-[0_0_20px_rgba(52,211,153,0.3)] transition-all">📍</div>
                 <div>
-                  <p className="text-[10px] font-black text-slate-500 uppercase tracking-widest">Location</p>
-                  <p className="text-white font-bold">Tamil Nadu, India</p>
+                  <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">Location</p>
+                  <p className="text-xl font-black text-transparent bg-clip-text bg-gradient-to-r from-teal-300 via-emerald-300 to-cyan-300">Tamil Nadu, India</p>
+                  <p className="text-sm font-bold text-slate-300 mt-0.5">Chengalpattu Dist.</p>
                 </div>
               </div>
             </div>
