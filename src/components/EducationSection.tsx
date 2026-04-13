@@ -32,6 +32,15 @@ const courses = [
     summary: "Core ML concepts and hands-on projects for practical model building.",
     links: [{ label: "View Certificate", url: "https://github.com/jayasri21072006/pro/blob/main/ML%20certification%20-Coursera%2CAWS.pdf" }]
   },
+  {
+    name: "Data Science & Gen AI",
+    platform: "PW Skills & IBM",
+    summary: "Comprehensive training combined with hands-on generative AI techniques.",
+    links: [
+      { label: "IBM Certificate", url: "https://www.coursera.org/account/accomplishments/verify/T9ZQO0EV81S4" },
+      { label: "PW Skills Cert", url: "https://github.com/jayasri21072006/pro/blob/main/pw%20skills%20DS%20with%20GenAI.pdf" }
+    ]
+  }
 ];
 
 const EducationSection = () => {
