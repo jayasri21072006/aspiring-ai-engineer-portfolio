@@ -43,12 +43,12 @@ const ExperienceSection = () => {
                 <div className="flex items-center gap-5 mb-6">
                   <div className="w-14 h-14 rounded-2xl flex items-center justify-center text-3xl bg-slate-900">{e.icon}</div>
                   <div>
-                    <h3 className="text-xl font-black text-white">{e.title}</h3>
+                    <h3 className="text-xl font-black text-white group-hover:text-violet-400 transition-colors">{e.title}</h3>
                     <p className="text-violet-400 font-bold text-sm tracking-tight">{e.comp}</p>
                   </div>
-                  <span className="ml-auto text-[10px] font-black text-slate-500 tracking-widest uppercase">{e.time}</span>
+                  <span className="ml-auto text-[10px] font-black text-slate-400 tracking-widest uppercase">{e.time}</span>
                 </div>
-                <p className="text-slate-400 text-sm leading-relaxed mb-6">{e.desc}</p>
+                <p className="text-slate-200 text-sm leading-relaxed mb-6 font-medium">{e.desc}</p>
                 <div className="flex flex-wrap gap-2 mb-6">
                   {e.tags.map(t => <span key={t} className="px-3 py-1 rounded-lg bg-white/5 border border-white/5 text-[10px] font-black text-slate-300 uppercase tracking-wider">{t}</span>)}
                 </div>

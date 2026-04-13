@@ -74,11 +74,11 @@ const EducationSection = () => {
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-12 h-12 rounded-xl bg-slate-900 flex items-center justify-center text-2xl shadow-inner">📜</div>
                   <div>
-                    <h4 className="text-white font-black text-sm">{c.name}</h4>
-                    <p className="text-violet-500 text-[10px] font-black uppercase tracking-widest">{c.platform}</p>
+                    <h4 className="text-white font-black text-sm group-hover:text-violet-400 transition-colors">{c.name}</h4>
+                    <p className="text-violet-400 text-[10px] font-black uppercase tracking-widest">{c.platform}</p>
                   </div>
                 </div>
-                <p className="text-slate-500 text-xs leading-relaxed mb-6 flex-grow">{c.summary}</p>
+                <p className="text-slate-200 text-xs leading-relaxed mb-6 flex-grow font-medium">{c.summary}</p>
                 <div className="flex flex-wrap gap-3 mt-auto">
                   {c.links.map((link, lIdx) => (
                     <a key={lIdx} href={link.url} target="_blank" rel="noopener noreferrer" className="flex-1 py-3 border border-white/10 text-white rounded-xl text-center text-[10px] font-black hover:bg-white hover:text-slate-950 transition-all uppercase tracking-widest">
