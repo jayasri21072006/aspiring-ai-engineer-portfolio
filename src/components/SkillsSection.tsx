@@ -4,7 +4,7 @@ const skills = [
   "Python (Intermediate/Advanced)", "SQL", "Java", "C",
   "HTML CSS JS (Intermediate)",
   "Machine Learning", "Deep Learning", "Generative AI", "NLP", "Computer Vision",
-  "Scikit-learn", "TensorFlow", "PyTorch", "MediaPipe", "YOLOv8",
+  "Scikit-learn", "TensorFlow", "PyTorch", "YOLOv8",
   "RAG Pipeline", "Model Quantisation", "CNN", "Data Analysis",
   "Flask API", "FastAPI", "Streamlit",
   "MongoDB", "Vector DB", "Git & GitHub", "Docker", "Problem Solving"

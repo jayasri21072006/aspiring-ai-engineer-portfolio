@@ -30,6 +30,7 @@ const HeroSection = () => {
         <div className="flex gap-4 flex-wrap justify-center mb-16 animate-fade-in-delayed">
           <a href="#projects" className="px-8 py-4 rounded-2xl text-sm font-black text-white shadow-2xl shadow-violet-600/30 hover:scale-105 hover:rotate-1 transition-all" style={{ background: "linear-gradient(135deg,#7c3aed,#4f46e5)" }}>EXPLORE PROJECTS</a>
           <a href="#contact" className="px-8 py-4 rounded-2xl text-sm font-black text-white border border-white/20 hover:bg-white/10 transition-all uppercase tracking-widest bg-white/5">GET IN TOUCH</a>
+          <a href="https://github.com/jayasri21072006/pro/raw/main/CV_Jayasri.pdf" download className="px-8 py-4 rounded-2xl text-sm font-black uppercase tracking-widest border border-emerald-400/40 text-emerald-300 hover:bg-emerald-400/10 hover:border-emerald-400/70 transition-all bg-emerald-400/5 flex items-center gap-2">⬇ DOWNLOAD CV</a>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 w-full max-w-3xl mx-auto animate-fade-in-delayed">
