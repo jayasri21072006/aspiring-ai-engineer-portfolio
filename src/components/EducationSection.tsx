@@ -3,18 +3,6 @@ import { ExternalLink, ChevronRight } from "lucide-react";
 
 const courses = [
   {
-    name: "SQL (Basic)",
-    platform: "HackerRank",
-    summary: "Validation of basic SQL query design and data manipulation skills.",
-    links: [{ label: "View Certificate", url: "https://github.com/jayasri21072006/pro/blob/main/SQL%20certification.pdf" }]
-  },
-  {
-    name: "Python (Basic)",
-    platform: "HackerRank",
-    summary: "Demonstrated proficiency in core Python programming concepts and syntax.",
-    links: [{ label: "Verify Skill", url: "#" }]
-  },
-  {
     name: "MongoDB Developer",
     platform: "MongoDB University",
     summary: "Proficiency in MongoDB indexing, aggregation pipelines, and data modeling for scalable applications.",
@@ -40,6 +28,18 @@ const courses = [
       { label: "IBM Certificate", url: "https://www.coursera.org/account/accomplishments/verify/T9ZQO0EV81S4" },
       { label: "PW Skills Cert", url: "https://github.com/jayasri21072006/pro/blob/main/pw%20skills%20DS%20with%20GenAI.pdf" }
     ]
+  },
+  {
+    name: "SQL (Basic)",
+    platform: "HackerRank",
+    summary: "Validation of basic SQL query design and data manipulation skills.",
+    links: [{ label: "View Certificate", url: "https://github.com/jayasri21072006/pro/blob/main/SQL%20certification.pdf" }]
+  },
+  {
+    name: "Python (Basic)",
+    platform: "HackerRank",
+    summary: "Demonstrated proficiency in core Python programming concepts and syntax.",
+    links: [{ label: "Verify Skill", url: "#" }]
   }
 ];
 
