@@ -8,7 +8,7 @@ const achievements = [
     detail: "Selected for the second round of Flipkart's national engineering challenge, progressing through the initial phase." 
   },
   { 
-    icon: "🥇", 
+    icon: "⭐", 
     title: "HackerRank 6-Star Python", 
     sub: "Gold Badge | 2277.5 Points", 
     detail: "Highest proficiency level with a 6-Star Badge and Gold Level in Python, achieving a top score of 2277.5 through advanced problem solving." 
