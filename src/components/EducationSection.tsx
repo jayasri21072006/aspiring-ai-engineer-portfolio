@@ -76,12 +76,16 @@ const EducationSection = () => {
             </div>
           </div>
 
-          <div className="card-glass rounded-[2rem] p-8 relative overflow-hidden group opacity-80">
+          <div className="card-glass rounded-[2rem] p-8 relative overflow-hidden group border border-white/10 hover:border-violet-500/30 transition-all">
             <div className="flex items-center gap-6">
-              <div className="w-14 h-14 rounded-2xl bg-slate-900 flex items-center justify-center text-2xl">🏫</div>
-              <div>
-                <h3 className="text-lg font-black text-white">GGHSS Kadapakkam</h3>
-                <p className="text-violet-500 text-xs font-bold uppercase tracking-widest">Secondary & Higher Secondary Education</p>
+              <div className="w-14 h-14 rounded-2xl bg-slate-900 flex items-center justify-center text-2xl shadow-inner shadow-violet-500/20">🏫</div>
+              <div className="flex-1">
+                <div className="flex items-center justify-between mb-1">
+                  <h3 className="text-xl font-black text-white group-hover:text-violet-400 transition-colors">GGHSS Kadapakkam</h3>
+                  <span className="text-xl font-black text-transparent bg-clip-text bg-gradient-to-r from-violet-300 to-fuchsia-300">95.5%</span>
+                </div>
+                <p className="text-slate-300 text-xs font-bold uppercase tracking-widest opacity-80">Secondary & Higher Secondary Education</p>
+                <p className="text-[10px] text-violet-500 font-black mt-2 uppercase tracking-tighter">Consistent Academic Excellence</p>
               </div>
             </div>
           </div>
