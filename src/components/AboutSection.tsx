@@ -1,99 +1,73 @@
 import SectionHeader from "./SectionHeader";
-import { Brain, Database, Sparkles, BarChart3 } from "lucide-react";
-
-const highlights = [
-  {
-    icon: Sparkles,
-    title: "AI & NLP",
-    skills: ["Generative AI", "NLP", "AI"]
-  },
-  {
-    icon: Brain,
-    title: "Machine Learning",
-    skills: ["ML", "Deep Learning", "Scikit-learn", "ML Pipelines"]
-  },
-  {
-    icon: BarChart3,
-    title: "Data Science",
-    skills: ["Statistics", "Data Analysis"]
-  },
-  {
-    icon: Database,
-    title: "Databases",
-    skills: ["SQL", "MongoDB", "Vector DB"]
-  }
-];
 
 const AboutSection = () => {
   return (
     <section id="about" className="py-32 px-4">
       <div className="max-w-6xl mx-auto text-left">
         <SectionHeader title="About Me" sub="Professional Narrative" />
-      
-      <div className="grid md:grid-cols-2 gap-12 items-center">
-        <div className="space-y-6">
-          <p className="text-muted-foreground leading-relaxed text-lg font-semibold">
-            I am an aspiring AI & Machine Learning Engineer with a strong foundation in Python, SQL, 
-            and applied machine learning, supported by hands-on internships and production-level projects.
-          </p>
-          <p className="text-muted-foreground leading-relaxed font-semibold">
-            I have proven experience in designing, training, evaluating, and deploying ML models, 
-            including end-to-end data pipelines and real-world applications. My technical expertise 
-            spans machine learning, deep learning, generative AI, and backend integration using Flask and Streamlit.
-          </p>
-          <p className="text-muted-foreground leading-relaxed font-semibold">
-            Through projects such as a Crypto Liquidity Predictor, I have built complete ML solutions 
-            involving data preprocessing, exploratory data analysis, feature engineering, and model deployment. 
-            I have developed interactive web applications to serve trained models, implemented Random Forest 
-            regression, and documented projects with clear EDA and system design reports.
-          </p>
-          <p className="text-muted-foreground leading-relaxed font-semibold">
-            I bring a strong problem-solving mindset, with the ability to translate data into scalable, 
-            data-driven solutions, and I actively sharpen my skills through advanced coursework, competitive 
-            platforms, and continuous experimentation with modern AI tools and frameworks.
-          </p>
-          
-          <div className="mt-6">
-            <div className="rounded-xl p-5 bg-card/60 border border-primary/20 shadow-md flex items-center justify-between gap-4">
-              <div className="flex-1">
-                <p className="text-sm text-primary/80 font-semibold mb-1">Snapshot</p>
-                <h4 className="text-lg font-semibold text-white mb-2">Open to opportunities in AI & Machine Learning</h4>
-                <p className="text-sm text-muted-foreground mb-3">Applied ML, model deployment, and generative AI — experienced with end-to-end projects, collaborations, and building production-ready solutions.</p>
-                <div className="flex flex-wrap gap-2">
-                  <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">ML Production</span>
-                  <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">NLP</span>
-                  <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">Deployment</span>
-                  <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">Python</span>
-                </div>
+        
+        <div className="flex flex-col md:flex-row gap-16 items-start">
+          <div className="md:w-3/5 space-y-8">
+            <h3 className="text-4xl font-black text-white tracking-tighter leading-tight">
+              Bridging Theory and <span className="text-violet-500">Intelligent Deployment.</span>
+            </h3>
+            <div className="space-y-6 text-slate-400 text-lg leading-relaxed">
+              <p>
+                I am a focused AI & Machine Learning Engineer specializing in building end-to-end intelligent systems.
+                My work centers on the intersection of deep learning, natural language processing, and computer vision,
+                aiming to transform raw data into actionable insights through robust, scalable models.
+              </p>
+              <p>
+                Maintaining a <span className="text-white font-bold">9.35 CGPA</span> at Anand Institute of Higher Technology, 
+                I combine academic rigor with extensive practical experience gained through four internships across 
+                diverse specialties—from Node.js backend architecture to ML pipelines and Python automation.
+              </p>
+              <p>
+                My philosophy is built on three core pillars: <span className="text-violet-400">Precision</span> in data processing, 
+                <span className="text-violet-400">Innovation</span> in model selection, and <span className="text-violet-400">Efficiency</span> 
+                in deployment. Whether it's predicting crypto liquidity or building real-time proctoring systems, 
+                I strive for excellence in every line of code.
+              </p>
+            </div>
+            
+            <div className="pt-8 flex gap-8 border-t border-white/5">
+              <div>
+                <p className="text-3xl font-black text-white">4+</p>
+                <p className="text-[10px] font-black text-slate-500 uppercase tracking-widest mt-1">Internships</p>
               </div>
-              <div className="shrink-0">
-                <a href="#contact" className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-primary text-primary-foreground font-semibold shadow-sm hover:glow-primary transition">Contact Me</a>
+              <div>
+                <p className="text-3xl font-black text-white">200+</p>
+                <p className="text-[10px] font-black text-slate-500 uppercase tracking-widest mt-1">DSA Problems</p>
+              </div>
+              <div>
+                <p className="text-3xl font-black text-white">9.35</p>
+                <p className="text-[10px] font-black text-slate-500 uppercase tracking-widest mt-1">CGPA</p>
               </div>
             </div>
           </div>
-        </div>
-        
-        <div className="grid grid-cols-2 gap-4">
-          {highlights.map((item, index) => (
-            <div 
-              key={index}
-              className="card-glass rounded-xl p-6 hover:border-primary/30 transition-all duration-300 group"
-            >
-              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:glow-primary transition-all duration-300">
-                <item.icon className="h-6 w-6 text-primary" />
-              </div>
-              <h3 className="font-display font-semibold mb-2">{item.title}</h3>
-              <div className="flex flex-wrap gap-1">
-                {item.skills.map((skill, skillIndex) => (
-                  <span key={skillIndex} className="text-xs text-muted-foreground bg-primary/5 px-2 py-0.5 rounded">
-                    {skill}
-                  </span>
-                ))}
-              </div>
+
+          <div className="md:w-2/5 w-full">
+            <div className="card-glass rounded-[3rem] p-10 relative overflow-hidden group">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-violet-600/10 rounded-full -mr-16 -mt-16 blur-3xl group-hover:bg-violet-600/20 transition-all" />
+              <h4 className="text-xl font-black text-white mb-6">Mission Control</h4>
+              <ul className="space-y-6">
+                <li className="flex gap-4">
+                  <span className="text-violet-500 font-black">01</span>
+                  <p className="text-sm text-slate-400"><strong className="text-white block mb-1">State-of-the-art AI</strong> Implementing latest architectures like YOLOv8 and Transformer models for real-world impact.</p>
+                </li>
+                <li className="flex gap-4">
+                  <span className="text-violet-500 font-black">02</span>
+                  <p className="text-sm text-slate-400"><strong className="text-white block mb-1">Production Readiness</strong> Moving models from Jupyter notebooks to scalable production environments using Flask and Docker.</p>
+                </li>
+                <li className="flex gap-4">
+                  <span className="text-violet-500 font-black">03</span>
+                  <p className="text-sm text-slate-400"><strong className="text-white block mb-1">Cross-Functional Integration</strong> Bridging the gap between intelligent backends and seamless user interfaces.</p>
+                </li>
+              </ul>
+              <a href="#contact" className="mt-10 block w-full py-4 bg-violet-600 text-white text-center rounded-2xl font-black text-xs hover:bg-violet-500 hover:shadow-xl hover:shadow-violet-600/20 transition-all uppercase tracking-widest">Secure Collaboration</a>
             </div>
-          ))}
+          </div>
         </div>
-      </div>
       </div>
     </section>
   );
