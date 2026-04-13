@@ -3,6 +3,18 @@ import { ExternalLink, ChevronRight } from "lucide-react";
 
 const courses = [
   {
+    name: "SQL (Basic)",
+    platform: "HackerRank",
+    summary: "Validation of basic SQL query design and data manipulation skills.",
+    links: [{ label: "View Certificate", url: "https://github.com/jayasri21072006/pro/blob/main/SQL%20certification.pdf" }]
+  },
+  {
+    name: "Python (Basic)",
+    platform: "HackerRank",
+    summary: "Demonstrated proficiency in core Python programming concepts and syntax.",
+    links: [{ label: "Verify Skill", url: "#" }]
+  },
+  {
     name: "MongoDB Developer",
     platform: "MongoDB University",
     summary: "Proficiency in MongoDB indexing, aggregation pipelines, and data modeling for scalable applications.",
@@ -27,28 +39,40 @@ const EducationSection = () => {
     <section id="education" className="py-32 px-4">
       <div className="max-w-4xl mx-auto text-left">
         <SectionHeader title="Education" sub="Academic Timeline" />
-        <div className="card-glass rounded-[2.5rem] p-10 relative overflow-hidden group">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-violet-600/5 rounded-full -mr-32 -mt-32 blur-[80px]" />
-          <div className="flex items-start gap-8 flex-wrap md:flex-nowrap">
-            <div className="w-20 h-20 rounded-[1.5rem] flex items-center justify-center text-4xl shadow-xl flex-shrink-0 relative z-10"
-              style={{ background: "linear-gradient(135deg,#4f46e5,#2563eb)" }}>🎓</div>
-            <div className="flex-1 min-w-0 relative z-10">
-              <div className="flex items-start justify-between flex-wrap gap-4 mb-4">
-                <div>
-                  <h3 className="text-2xl font-black text-white mb-1 leading-tight">B.Tech - Artificial Intelligence & Data Science</h3>
-                  <p className="text-violet-400 font-bold text-lg">Anand Institute of Higher Technology, Chennai</p>
+        <div className="space-y-6">
+          <div className="card-glass rounded-[2.5rem] p-10 relative overflow-hidden group">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-violet-600/5 rounded-full -mr-32 -mt-32 blur-[80px]" />
+            <div className="flex items-start gap-8 flex-wrap md:flex-nowrap">
+              <div className="w-20 h-20 rounded-[1.5rem] flex items-center justify-center text-4xl shadow-xl flex-shrink-0 relative z-10"
+                style={{ background: "linear-gradient(135deg,#4f46e5,#2563eb)" }}>🎓</div>
+              <div className="flex-1 min-w-0 relative z-10">
+                <div className="flex items-start justify-between flex-wrap gap-4 mb-4">
+                  <div>
+                    <h3 className="text-2xl font-black text-white mb-1 leading-tight">B.Tech - Artificial Intelligence & Data Science</h3>
+                    <p className="text-violet-400 font-bold text-lg">Anand Institute of Higher Technology, Chennai</p>
+                  </div>
+                  <span className="text-[10px] bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 font-black px-4 py-1.5 rounded-full tracking-widest h-fit uppercase">Pursuing</span>
                 </div>
-                <span className="text-[10px] bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 font-black px-4 py-1.5 rounded-full tracking-widest h-fit">PURSUING</span>
+                <div className="flex flex-wrap gap-4 mt-8">
+                  <div className="bg-slate-900 rounded-3xl px-8 py-5 border border-white/5">
+                    <p className="text-3xl font-black text-white">9.35</p>
+                    <p className="text-xs text-slate-500 mt-1 font-bold uppercase tracking-widest text-[10px]">CGPA · Up to 5th Sem</p>
+                  </div>
+                  <div className="bg-slate-900 rounded-3xl px-8 py-5 border border-white/5">
+                    <p className="text-3xl font-black text-white">2023–27</p>
+                    <p className="text-xs text-slate-500 mt-1 font-bold uppercase tracking-widest text-[10px]">Batch</p>
+                  </div>
+                </div>
               </div>
-              <div className="flex flex-wrap gap-4 mt-8">
-                <div className="bg-slate-900 rounded-3xl px-8 py-5 border border-white/5">
-                  <p className="text-3xl font-black text-white">9.35</p>
-                  <p className="text-xs text-slate-500 mt-1 font-bold uppercase tracking-widest text-[10px]">CGPA · Up to 5th Sem</p>
-                </div>
-                <div className="bg-slate-900 rounded-3xl px-8 py-5 border border-white/5">
-                  <p className="text-3xl font-black text-white">2023–27</p>
-                  <p className="text-xs text-slate-500 mt-1 font-bold uppercase tracking-widest text-[10px]">Batch</p>
-                </div>
+            </div>
+          </div>
+
+          <div className="card-glass rounded-[2rem] p-8 relative overflow-hidden group opacity-80">
+            <div className="flex items-center gap-6">
+              <div className="w-14 h-14 rounded-2xl bg-slate-900 flex items-center justify-center text-2xl">🏫</div>
+              <div>
+                <h3 className="text-lg font-black text-white">GGHSS Kadapakkam</h3>
+                <p className="text-violet-500 text-xs font-bold uppercase tracking-widest">Secondary & Higher Secondary Education</p>
               </div>
             </div>
           </div>

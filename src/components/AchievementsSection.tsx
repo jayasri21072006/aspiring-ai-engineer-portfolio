@@ -5,7 +5,13 @@ const achievements = [
     icon: "🛍️", 
     title: "Flipkart Grid 7.0", 
     sub: "Selected for Round 2", 
-    detail: "Selected for the second round of Flipkart's national engineering challenge. This achievement marks successful progression through the initial competitive assessment phase." 
+    detail: "Selected for the second round of Flipkart's national engineering challenge, progressing through the initial phase." 
+  },
+  { 
+    icon: "🥇", 
+    title: "HackerRank Python Gold", 
+    sub: "2277.5 Points Earned", 
+    detail: "Earned the Gold Level Python Badge on HackerRank, achieving a score of 2277.5 through advanced problem solving." 
   },
   { icon: "💻", title: "LeetCode 200+", sub: "Data Structures & Algos", detail: "Solved 200+ DSA problems covering Arrays, Linked Lists, Trees, Graphs, Dynamic Programming, and more." },
   { icon: "🏆", title: "SIH 2025 Selected", sub: "College Level Round", detail: "Sentiment Analysis project selected at the Internal SIH 2025 college round, competing with teams across departments." }

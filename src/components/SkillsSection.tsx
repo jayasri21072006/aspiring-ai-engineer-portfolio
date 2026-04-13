@@ -1,7 +1,7 @@
 import SectionHeader from "./SectionHeader";
 
 const skills = [
-  "Python", "SQL", "Java", "C",
+  "Python (Intermediate/Advanced)", "SQL", "Java", "C",
   "HTML CSS JS (Intermediate)",
   "Machine Learning", "Deep Learning", "Generative AI", "NLP", "Computer Vision",
   "Scikit-learn", "TensorFlow", "PyTorch", "MediaPipe", "YOLOv8",
