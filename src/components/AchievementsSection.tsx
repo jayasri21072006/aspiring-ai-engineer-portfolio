@@ -1,6 +1,12 @@
 import SectionHeader from "./SectionHeader";
 
 const achievements = [
+  {
+    icon: "🥇",
+    title: "Secured Rank 1",
+    sub: "Academic Excellence",
+    detail: "Secured Rank 1 in class, demonstrating consistent top-tier academic performance throughout the program."
+  },
   { 
     icon: "🛍️", 
     title: "Flipkart Grid 7.0", 
@@ -28,7 +34,7 @@ const AchievementsSection = () => {
               <div className="text-4xl mb-6 transform group-hover:scale-110 transition-transform">{a.icon}</div>
               <h4 className="text-lg font-black text-white mb-2">{a.title}</h4>
               <p className="text-xs font-black text-violet-500 uppercase tracking-widest mb-4">{a.sub}</p>
-              <p className="text-slate-500 text-sm leading-relaxed">{a.detail}</p>
+              <p className="text-slate-200 text-sm leading-relaxed font-medium">{a.detail}</p>
             </div>
           ))}
         </div>
