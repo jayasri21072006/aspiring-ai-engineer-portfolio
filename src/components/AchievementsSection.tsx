@@ -1,12 +1,6 @@
 import SectionHeader from "./SectionHeader";
 
 const achievements = [
-  {
-    icon: "🥇",
-    title: "Secured Rank 1",
-    sub: "Academic Excellence",
-    detail: "Secured Rank 1 in class, demonstrating consistent top-tier academic performance throughout the program."
-  },
   { 
     icon: "🛍️", 
     title: "Flipkart Grid 7.0", 

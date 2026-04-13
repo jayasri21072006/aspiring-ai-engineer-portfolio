@@ -85,7 +85,10 @@ const EducationSection = () => {
                   <span className="text-xl font-black text-transparent bg-clip-text bg-gradient-to-r from-violet-300 to-fuchsia-300">95.5%</span>
                 </div>
                 <p className="text-slate-300 text-xs font-bold uppercase tracking-widest opacity-80">Secondary & Higher Secondary Education</p>
-                <p className="text-[10px] text-violet-500 font-black mt-2 uppercase tracking-tighter">Consistent Academic Excellence</p>
+                <div className="flex items-center gap-2 mt-3">
+                  <span className="text-lg">🥇</span>
+                  <p className="text-[10px] text-violet-300 font-black uppercase tracking-widest">Secured Rank 1 · Consistent Academic Excellence</p>
+                </div>
               </div>
             </div>
           </div>
