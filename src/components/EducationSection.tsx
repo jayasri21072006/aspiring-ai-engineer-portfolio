@@ -17,7 +17,7 @@ const courses = [
   {
     name: "Machine Learning",
     platform: "Coursera & AWS",
-    summary: "Core ML concepts and hands-on projects for practical model building.",
+    summary: "ML concepts and hands-on projects for practical model building.",
     links: [{ label: "View Certificate", url: "https://github.com/jayasri21072006/pro/blob/main/ML%20certification%20-Coursera%2CAWS.pdf" }]
   },
   {
@@ -32,13 +32,13 @@ const courses = [
   {
     name: "SQL",
     platform: "HackerRank",
-    summary: "Validation of basic SQL query design and data manipulation skills.",
+    summary: "Validation of SQL query design and data manipulation skills.",
     links: [{ label: "View Certificate", url: "https://github.com/jayasri21072006/pro/blob/main/SQL%20certification.pdf" }]
   },
   {
     name: "Python",
     platform: "HackerRank",
-    summary: "Demonstrated proficiency in core Python programming concepts and syntax.",
+    summary: "Demonstrated proficiency in Python programming concepts and syntax.",
     links: [{ label: "View Certificate", url: "https://github.com/jayasri21072006/pro/blob/main/Python%20Certification.pdf" }]
   }
 ];
