@@ -41,13 +41,13 @@ const ProjectsSection = () => {
               <div className="w-14 h-14 rounded-2xl bg-slate-900 flex items-center justify-center text-3xl mb-6 shadow-inner ring-1 ring-white/5">
                 {p.icon}
               </div>
-              <h3 className="text-2xl font-black text-white mb-1">{p.title}</h3>
-              <p className="text-[10px] font-black text-violet-500 uppercase tracking-widest mb-4">{p.sub}</p>
-              <p className="text-slate-400 text-sm leading-relaxed mb-6 flex-grow">{p.description}</p>
+              <h3 className="text-2xl font-black text-white mb-1 tracking-tight">{p.title}</h3>
+              <p className="text-[11px] font-black text-violet-400 uppercase tracking-[0.2em] mb-4">{p.sub}</p>
+              <p className="text-white font-bold text-sm leading-relaxed mb-6 flex-grow">{p.description}</p>
               
               <div className="flex flex-wrap gap-2 mb-8">
                 {p.techStack.map((tech, i) => (
-                  <span key={i} className="text-[10px] px-2 py-1 rounded-lg bg-white/5 border border-white/5 text-slate-300 font-bold uppercase tracking-wider">
+                  <span key={i} className="text-[10px] px-2 py-1 rounded-lg bg-violet-500/10 border border-violet-500/20 text-violet-300 font-black uppercase tracking-widest">
                     {tech}
                   </span>
                 ))}

@@ -53,10 +53,10 @@
     --sidebar-ring: 186 100% 50%;
 
     /* Text color tokens */
-    --heading: 230 68% 60%; /* dark-blue for headings */
-    --text: 205 84% 96%; /* slightly brighter for body paragraphs */
-    --text-muted: 205 78% 86%; /* slightly brighter muted text */
-    --lead-color: 265 48% 74%; /* keep a variant for lead text */
+    --heading: 270 100% 88%; /* Bright lilac for headings to pop against dark background */
+    --text: 210 40% 98%; /* High contrast off-white for body text */
+    --text-muted: 215 20% 75%; /* More readable muted text */
+    --lead-color: 272 100% 80%; /* Vibrant lead text */
   }
 }
 
@@ -68,48 +68,40 @@
   body {
     @apply bg-background text-foreground font-sans antialiased;
     font-family: 'Inter', sans-serif;
+    font-weight: 500; /* Increased default boldness for a premium feel */
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Space Grotesk', sans-serif;
-  }
-
-  /* Make all headings consistently bold and use the heading color */
-  h1, h2, h3, h4, h5, h6 {
     color: hsl(var(--heading));
-    font-weight: 700;
+    font-weight: 800; /* Extra bold headings */
+    letter-spacing: -0.025em;
   }
 
-  /* Ensure font-display utility also renders bold headings consistently */
-  .font-display {
-    font-weight: 700;
-  }
   h1 {
-    font-weight: 800; /* stronger weight for primary title */
+    font-weight: 900; /* Ultimate boldness for primary title */
     font-size: 2.25rem;
     line-height: 1.05;
     margin-bottom: 0.5rem;
   }
 
   h2 {
-    font-weight: 700;
+    font-weight: 800;
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
-  }
-
-  h3, h4, h5, h6 {
-    font-weight: 700;
   }
 
   p {
     color: hsl(var(--text));
     line-height: 1.8;
     margin-bottom: 1rem;
+    font-weight: 500; /* Medium weight for all paragraphs for better presence */
   }
 
   .lead {
     color: hsl(var(--lead-color));
-    font-size: 1.05rem;
+    font-size: 1.1rem;
+    font-weight: 600;
   }
 
   /* Override muted foreground utility from theme to use our para tone */
@@ -121,22 +113,24 @@
   /* Also provide a helper class for emphasized paragraph text */
   .text-para-accent {
     color: hsl(var(--text));
+    font-weight: 600;
   }
   /* Links and navigation */
   a {
-    color: hsl(272 76% 66%);
+    color: hsl(272 100% 75%);
     text-decoration: none;
-    text-underline-offset: 0;
+    font-weight: 600;
+    transition: all 0.2s ease;
   }
 
   a:hover {
-    color: hsl(290 78% 60%);
-    text-decoration: none;
-    text-decoration-skip-ink: none;
+    color: hsl(290 100% 70%);
+    text-shadow: 0 0 8px hsla(272, 100%, 75%, 0.3);
   }
 
   .nav-link {
     color: hsl(var(--text-muted));
+    font-weight: 600;
     transition: color 0.25s ease;
   }
 

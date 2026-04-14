@@ -7,17 +7,17 @@ const HeroSection = () => {
       <div className="relative z-10 max-w-4xl mx-auto">
 
 
-        <h1 className="text-7xl sm:text-8xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-sky-200 to-white mb-4 tracking-tighter leading-[1] animate-slide-up">
+        <h1 className="text-7xl sm:text-9xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-sky-100 to-white mb-4 tracking-tighter leading-[0.9] animate-slide-up">
           Jayasri T
         </h1>
-        <p className="text-2xl sm:text-3xl font-black mb-8 tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-cyan-400 to-blue-300 animate-slide-up">
+        <p className="text-3xl sm:text-4xl font-black mb-8 tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-violet-400 to-fuchsia-400 animate-slide-up">
           AI & ML Engineer
         </p>
-        <p className="max-w-2xl text-white/80 text-lg leading-relaxed mb-10 animate-fade-in-delayed mx-auto font-semibold">
+        <p className="max-w-2xl text-white text-lg leading-relaxed mb-10 animate-fade-in-delayed mx-auto font-bold">
           Aspiring AI & ML Engineer with a strong foundation in deep learning, natural language processing, and computer vision. 
           Proven track record of building end-to-end intelligent systems, from real-time monitoring solutions to 
           predictive analytics platforms. Maintaining academic excellence with a CGPA of{" "}
-          <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-yellow-300 border-b-2 border-amber-400/40">9.35</span> (up to 5th Semester).
+          <span className="font-black text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 via-amber-300 to-orange-400 border-b-2 border-amber-400/60">9.35</span> (up to 5th Semester).
         </p>
 
         <div className="flex gap-4 flex-wrap justify-center mb-16 animate-fade-in-delayed">
@@ -35,8 +35,8 @@ const HeroSection = () => {
           ].map(({ label, value, icon, color }) => (
             <div key={label} className="card-glass rounded-[2.5rem] p-6 text-center group hover:-translate-y-2 transition-transform duration-300">
               <div className="text-3xl mb-3 filter grayscale group-hover:grayscale-0 transition-all">{icon}</div>
-              <p className={`text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r ${color} tracking-tighter`}>{value}</p>
-              <p className="text-[10px] text-slate-400 font-bold uppercase tracking-widest mt-2">{label}</p>
+              <p className={`text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r ${color} tracking-tighter`}>{value}</p>
+              <p className="text-[12px] text-white font-black uppercase tracking-widest mt-2">{label}</p>
             </div>
           ))}
         </div>

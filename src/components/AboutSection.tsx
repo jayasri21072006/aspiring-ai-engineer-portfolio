@@ -6,20 +6,20 @@ const AboutSection = () => {
       <div className="max-w-4xl mx-auto text-left">
         <SectionHeader title="About Me" sub="Professional Narrative" />
         
-        <div className="space-y-6 text-white/90 text-lg leading-relaxed">
+        <div className="space-y-6 text-white text-lg leading-relaxed font-bold">
           <p>
             I am a focused AI & Machine Learning Engineer specializing in building end-to-end intelligent systems.
             My work centers on the intersection of deep learning, natural language processing, and computer vision,
             aiming to transform raw data into actionable insights through robust, scalable models.
           </p>
           <p>
-            Maintaining a <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-300 to-fuchsia-300 font-black">9.35 CGPA</span> at Anand Institute of Higher Technology, 
+            Maintaining a <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-200 to-fuchsia-300 font-black">9.35 CGPA</span> at Anand Institute of Higher Technology, 
             I combine academic rigor with extensive practical experience gained through four internships across 
             diverse specialties — from Node.js backend architecture to ML pipelines and Python automation.
           </p>
           <p>
-            My philosophy is built on three core pillars: <span className="text-violet-300 font-bold">Precision</span> in data processing, 
-            <span className="text-violet-300 font-bold">Innovation</span> in model selection, and <span className="text-violet-300 font-bold">Efficiency</span> in deployment. 
+            My philosophy is built on three core pillars: <span className="text-violet-200 font-black">Precision</span> in data processing, 
+            <span className="text-fuchsia-300 font-black">Innovation</span> in model selection, and <span className="text-cyan-300 font-black">Efficiency</span> in deployment. 
             Whether it's predicting crypto liquidity or building real-time proctoring systems, 
             I strive for excellence in every line of code.
           </p>

@@ -298,11 +298,18 @@ const AnimatedBackground = () => {
   }, []);
 
   return (
-    <canvas
-      ref={canvasRef}
-      className="fixed inset-0 pointer-events-none z-0"
-      style={{ background: 'linear-gradient(135deg, hsl(222, 47%, 6%) 0%, hsl(230, 50%, 10%) 50%, hsl(250, 40%, 12%) 100%)' }}
-    />
+    <div className="fixed inset-0 pointer-events-none z-0" style={{ backgroundColor: '#030510' }}>
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-60"
+        style={{ backgroundImage: 'url(/aspiring-ai-engineer-portfolio/ai_ml_background.png)', filter: 'contrast(1.2) brightness(0.8)' }}
+      />
+      <canvas
+        ref={canvasRef}
+        className="absolute inset-0"
+        style={{ background: 'transparent' }}
+      />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[rgba(3,5,16,0.3)] to-[rgba(3,5,16,0.9)]" />
+    </div>
   );
 };
 
