@@ -26,7 +26,7 @@ const courses = [
     summary: "Comprehensive training combined with hands-on generative AI techniques.",
     links: [
       { label: "IBM Certificate", url: "https://www.coursera.org/account/accomplishments/verify/T9ZQO0EV81S4" },
-      { label: "PW Skills Cert", url: "https://github.com/jayasri21072006/pro/blob/main/pw%20skills%20DS%20with%20GenAI.pdf" }
+      { label: "PW Skills Certificate", url: "https://github.com/jayasri21072006/pro/blob/main/pw%20skills%20DS%20with%20GenAI.pdf" }
     ]
   },
   {
