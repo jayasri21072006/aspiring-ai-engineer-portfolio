@@ -27,6 +27,14 @@ const projects = [
     github: "https://github.com/jayasri21072006/crypto-liquidity-predictor",
     demo: "https://crypto-liquidity-predictor-jorq5yxc3mrkqfeovdcvuq.streamlit.app/",
     icon: "📈"
+  },
+  {
+    title: "LungsAI",
+    sub: "Deep Learning",
+    description: "State-of-the-art diagnostic assistant leveraging Deep Learning to identify Pneumonia from Chest X-Ray images with high precision. Features a custom CNN architecture and a Flask UI.",
+    techStack: ["Python", "PyTorch", "Flask", "OpenCV", "HTML/CSS"],
+    github: "https://github.com/jayasri21072006/lungs-xray-pneumonia-predictor",
+    icon: "🫁"
   }
 ];
 
